@@ -38,6 +38,10 @@ function initCommands(client) {
     client.addCommand('signinBO', function(cb) {
 		this.selector = globals.selector;
 		client
+			.setViewportSize({
+		        width: 970,
+		        height: 930
+		    })
 			.url('http://' + URL + '/admin-dev')
 			.waitForExist(this.selector.login, 90000)
             .setValue(this.selector.login, 'demo@prestashop.com')
@@ -50,6 +54,10 @@ function initCommands(client) {
 	client.addCommand('signinFO', function(cb) {
 		this.selector = globals.selector;
         client
+   			.setViewportSize({
+		        width: 970,
+		        height: 930
+		    })
 			.url('http://' + URL)
 			.waitForExist(this.selector.access_loginFO, 90000)
 			.click(this.selector.access_loginFO)
