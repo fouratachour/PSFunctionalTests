@@ -39,8 +39,8 @@ function initCommands(client) {
         this.selector = globals.selector;
         client
             .setViewportSize({
-                width: 970,
-                height: 930
+                width: 1600,
+                height: 940
             })
             .url('http://' + URL + '/admin-dev')
             .waitForExist(this.selector.login, 90000)
@@ -55,8 +55,8 @@ function initCommands(client) {
         this.selector = globals.selector;
         client
             .setViewportSize({
-                width: 970,
-                height: 930
+                width: 1600,
+                height: 940
             })
             .url('http://' + URL)
             .waitForExist(this.selector.access_loginFO, 90000)

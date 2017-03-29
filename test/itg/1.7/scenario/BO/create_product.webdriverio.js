@@ -141,8 +141,6 @@ describe('The Product Creation', function(){
         it('should go to the catalog', function(done){
 			this.client
 			    .pause(5000)
-			    .waitForExist(this.selector.more_option, 90000)
-                .click(this.selector.more_option)
 			    .waitForExist(this.selector.go_to_catalog, 90000)
                 .click(this.selector.go_to_catalog)
                 .call(done);
