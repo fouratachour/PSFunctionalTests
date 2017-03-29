@@ -134,7 +134,7 @@ module.exports = {
 		checkout_step4_payment: '//*[@id="payment-option-2"]',
 		checkout_step4_cgv: '//input[@id="conditions_to_approve[terms-and-conditions]"]',
 		checkout_step4_order: '#payment-confirmation >div > button',
-		checkout_total: '//div[@class="cart-summary-line cart-total"]/span[2]',
+		checkout_total: '//div[@class="cart-summary-line cart-total"]/span[2]', 
 		//order_confirmation_name: '#order-items > table:nth-child(2) > tbody > tr > td:nth-child(2)',
 		order_confirmation_name: '(//div[@class="order-confirmation-table"]/div)/div[2]/span',
 		//order_confirmation_price1: '#order-items > table:nth-child(4) > tbody > tr.font-weight-bold > td:nth-child(2)',
