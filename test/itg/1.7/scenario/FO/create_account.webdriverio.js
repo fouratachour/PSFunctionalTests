@@ -51,9 +51,9 @@ describe('The creation of an account in Front Office', function(){
 		it('should log in again', function(done){
 			this.client
 				.url('http://' + URL)
-				.pause(2000)
 				.waitForExist(this.selector.access_loginFO, 90000)
 				.click(this.selector.access_loginFO)
+				.pause(2000)
 				.waitForExist(this.selector.loginFO, 90000)
 				.setValue(this.selector.loginFO, new_customer_email)
 				.setValue(this.selector.passwordFO, '123456789')

@@ -7,7 +7,7 @@ var options = {
     logLevel: 'silent',
     waitForTimeout: 30000,
     desiredCapabilities: {
-        browserName: 'firefox',
+        browserName: 'chrome',
     },
     cli_args: {
         "webdriver.gecko.driver": "C:/wamp/www/Psfunctionnaltestfirefox/PSFunctionalTests/"
@@ -19,7 +19,7 @@ var options2 = {
     logLevel: 'silent',
     waitForTimeout: 30000,
     desiredCapabilities: {
-        browserName: 'firefox',
+        browserName: 'chrome',
         'tunnel-identifier': process.env.TRAVIS_JOB_NUMBER,
         username: process.env.SAUCE_USERNAME,
         access_key: process.env.SAUCE_ACCESS_KEY,
