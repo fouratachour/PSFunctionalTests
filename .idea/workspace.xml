@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fcfd44cf-ccf1-4721-90e0-d8087e709267" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/itg/1.7/common.webdriverio.js" afterPath="$PROJECT_DIR$/test/itg/1.7/common.webdriverio.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/itg/1.7/scenario/FO/create_account.webdriverio.js" afterPath="$PROJECT_DIR$/test/itg/1.7/scenario/FO/create_account.webdriverio.js" />
-    </list>
+    <list default="true" id="fcfd44cf-ccf1-4721-90e0-d8087e709267" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,8 +25,8 @@
       <file leaf-file-name="common.webdriverio.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/itg/1.7/common.webdriverio.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="28" lean-forward="false" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
+            <state relative-caret-position="272">
+              <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -428,8 +425,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/itg/1.7/common.webdriverio.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="28" lean-forward="false" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
+        <state relative-caret-position="272">
+          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding />
         </state>
       </provider>
