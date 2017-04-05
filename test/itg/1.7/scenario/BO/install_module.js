@@ -2,7 +2,7 @@
 var should = require('should');
 var common = require('../../common.webdriverio');
 var globals = require('../../globals.webdriverio.js');
-var green_validation_is_visible = false;
+
 
 describe('The Install of a Module', function(){
 	common.initMocha.call(this);
@@ -31,36 +31,16 @@ describe('The Install of a Module', function(){
 				.waitForExist(this.selector.modules_page_loaded, 90000)
 				.call(done);
 		});
-
-		it('should click on install button', function(done){
-			this.client
+		
+		it('should install the module', function(done){
+				this.client
 				.setValue(this.selector.modules_search, module_tech_name)
 				.click(this.selector.modules_search_button)
 				.waitForExist('//div[@data-tech-name="' + module_tech_name + '" and not(@style)]', 90000)
-				.click('//div[@data-tech-name="' + module_tech_name + '" and not(@style)]//button[@data-confirm_modal="module-modal-confirm-' + module_tech_name + '-install"]')
-				.pause(2000)
-				.isVisible(this.selector.red_validation).then(function(isVisible) {
-			        global.red_validation_is_visible = isVisible;
-				})
-				.pause(1000)
-                .isVisible(this.selector.green_validation).then(function(isVisible) {
-				    green_validation_is_visible = isVisible;
-				})
+				.click('//div[@data-tech-name="' + module_tech_name + '" and not(@style)]//a[@data-confirm_modal="module-modal-confirm-' + module_tech_name + '-install"]')
+				.waitForExist(this.selector.green_validation, 90000)
 				.call(done);
 		});
-
-		it('should check the installation',function(done){
-            if (red_validation_is_visible){
-                this.client
-            	    .getText(this.selector.red_validation).then(function(text) {
-                        done(new Error(text));
-                    })
-            }else if (green_validation_is_visible){
-                done();
-            }else{
-                done();
-            }
-	    });
 	});
 		
 	describe('Log out in Back Office', function(done){

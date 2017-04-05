@@ -7,7 +7,10 @@ var options = {
     logLevel: 'silent',
     waitForTimeout: 30000,
     desiredCapabilities: {
-        browserName: 'chrome',
+        browserName: 'firefox',
+    },
+    cli_args: {
+        "webdriver.gecko.driver": "C:/wamp/www/Psfunctionnaltestfirefox/PSFunctionalTests/"
     },
     port: 4444
 };
@@ -16,7 +19,7 @@ var options2 = {
     logLevel: 'silent',
     waitForTimeout: 30000,
     desiredCapabilities: {
-        browserName: 'chrome',
+        browserName: 'firefox',
         'tunnel-identifier': process.env.TRAVIS_JOB_NUMBER,
         username: process.env.SAUCE_USERNAME,
         access_key: process.env.SAUCE_ACCESS_KEY,
@@ -58,7 +61,7 @@ function initCommands(client) {
                 width: 1600,
                 height: 940
             })
-            .url('http://' + URL)
+            .url('http://'+URL)
             .waitForExist(this.selector.access_loginFO, 90000)
             .click(this.selector.access_loginFO)
             .waitForExist(this.selector.loginFO, 90000)
@@ -121,5 +124,8 @@ module.exports = {
     initMocha: function() {
         this.timeout(900000000);
         this.slow(45000);
+    },
+    take_screenshot: function(done) {
+        client.saveScreenshot(__dirname + '/screenshots/' + client.desiredCapabilities.browserName + '-Exception' + '_' + fctname + '.png');
     }
 };

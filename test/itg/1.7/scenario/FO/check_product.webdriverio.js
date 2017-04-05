@@ -51,7 +51,7 @@ describe('The Check of the Product in Front Office', function(){
 				.click(this.selector.search_product_result_name)
 				.waitForExist(this.selector.product_name_details, 90000)
 				.getText(this.selector.product_name_details).then(function(text) {
-					var my_name_check = text[2];
+					var my_name_check = text;
 					should(my_name_check.toLowerCase()).be.equal('test_nodejs_' + product_id);
 				})
 				//image_data_id
