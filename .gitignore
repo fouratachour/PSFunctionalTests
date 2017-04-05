@@ -1,2 +1,4 @@
 node_modules/*
 .DS_Store
+geckodriver
+selenium-server-standalone-3.3.1.jar
