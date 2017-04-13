@@ -123,6 +123,6 @@ module.exports = {
         this.slow(45000);
     },
     take_screenshot: function(done) {
-        client.saveScreenshot(__dirname + '/screenshots/' + client.desiredCapabilities.browserName + '-Exception' + '_' + fctname + '.png');
+        client.saveScreenshot(__dirname + '/screenshots/' + client.desiredCapabilities.browserName + '-Exception' + '_' + global.fctname + '.png');
     }
 };
