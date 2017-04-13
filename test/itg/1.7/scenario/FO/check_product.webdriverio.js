@@ -16,7 +16,7 @@ describe('The Check of the Product in Front Office', function(){
 	describe('Open the shop', function(done){
 		it('should acces to the Front Office', function(done){
 			this.client
-				.url('http://' + URL + '/en/')
+				.url('http://' + URL)
 				.call(done);
 		});
 	});
