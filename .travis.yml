@@ -37,7 +37,7 @@ before_script:
   - npm install selenium-standalone@latest
   - cd node_modules/selenium-standalone/bin/
   - ./selenium-standalone install
-  - ./selenium-standalone start -- -debug & /dev/null &
+  - ./selenium-standalone start -- -debug &
   - cd ../../..
   - npm install
   - export CHROME_BIN=/usr/bin/google-chrome
