@@ -80,7 +80,7 @@ module.exports = {
 		create_account_email: '#email',
 		create_account_password: '#passwd',
 		create_account_info_validate: '#submitAccount',
-		logo_home_pageFO: '.logo.img-responsive',
+		logo_home_pageFO: '//*[@id="header_logo"]/a',
 		first_product_home_page: '.product_img_link',
 		details_first_product_home_page: '.button.lnk_view.btn.btn-default',
 		add_to_cart: '[name="Submit"]',

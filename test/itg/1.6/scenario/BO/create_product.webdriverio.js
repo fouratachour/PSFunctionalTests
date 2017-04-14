@@ -49,7 +49,7 @@ describe('The Product Creation', function(){
         it('should enter the product name', function(done){
             this.client
                 .setValue(this.selector.product_name, 'test_nodejs_' + product_id)
-                .pause(60000)
+                .pause(5000)
                 .call(done);
         });
 
@@ -135,12 +135,13 @@ describe('The Product Creation', function(){
 
         it('should set the product image', function(done){
             this.client
+                .pause(3000)
                 .execute(function() {
                     document.getElementById("file").style="";
-                    })
+                })
                 .chooseFile(this.selector.picture, toUpload)
-                .pause(3000)
                 .waitForExist(this.selector.upload_file_button, 60000)
+                .pause(2000)
                 .click(this.selector.upload_file_button)
                 .waitForExist(this.selector.upload_succes, 60000)
                 .getAttribute('img[title=' + 'test_nodejs_' + product_id + ']', "src").then(function(text) {
@@ -165,6 +166,7 @@ describe('The Product Creation', function(){
             this.client
                 .setValue(this.selector.catalogue_filter_by_name, 'test_nodejs_' + product_id)
                 .click(this.selector.catalogue_submit_filter)
+                .pause(2000)
                 .waitForExist(this.selector.edit_product, 60000)
                 .call(done);
         });
@@ -184,7 +186,7 @@ describe('The Product Creation', function(){
                     var my_name = text;
                     should(my_name).be.equal('test_nodejs_' + product_id);
                 })
-                .pause(60000)
+                .pause(5000)
                 .call(done);
         });
 

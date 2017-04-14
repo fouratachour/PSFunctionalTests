@@ -6,14 +6,14 @@ var globals = require('../../globals.webdriverio.js');
 
 describe('The Check of the Product in Front Office', function(){
 	common.initMocha.call(this);
-	
+
 	before(function(done){
 		this.selector = globals.selector;
 		this.client.call(done);
 	});
 
 	after(common.after);
-		
+
 	describe('Open the shop', function(done){
 		it('should acces to the Front Office', function(done){
 			this.client
@@ -26,10 +26,10 @@ describe('The Check of the Product in Front Office', function(){
 	describe('Check the product', function(done){
 		it('should search for the product', function(done){
 			this.client
-                .waitForExist(this.selector.search_product, 60000)                                
+                .waitForExist(this.selector.search_product, 60000)
                 .click(this.selector.search_product)
 				.setValue(this.selector.search_product, 'test_nodejs_' + product_id)
-				.pause(1000)
+				.pause(5000)
 				.click(this.selector.search_product_button)
 				.waitForExist(this.selector.search_product_result_name, 60000)
 				.call(done);
