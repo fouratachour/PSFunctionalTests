@@ -38,7 +38,7 @@ before_script:
   - npm install selenium-standalone@6.0.0
   - cd node_modules/selenium-standalone/bin/
   - ./selenium-standalone install
-  - ./selenium-standalone start --debug  &
+  - DISPLAY=:10 ./selenium-standalone start &> /dev/null &
   - cd ../../..
   - export CHROME_BIN=/usr/bin/google-chrome
   - cd test/itg/$PS_VERSION

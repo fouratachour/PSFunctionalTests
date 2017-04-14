@@ -47,7 +47,7 @@ describe('The Check of the Product in Front Office', function(){
 		it('should check the product price', function(done){
 				this.client.getText(this.selector.search_product_result_price).then(function(text) {
 					var my_price = text;
-					console.log(my_price);
+					console.log(parseInt(my_price[1]));
 					should(parseInt(my_price[1])).be.equal(parseInt("6"));
 				})
 				console.log("test");
