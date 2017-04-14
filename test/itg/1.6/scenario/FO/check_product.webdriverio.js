@@ -47,10 +47,8 @@ describe('The Check of the Product in Front Office', function(){
 		it('should check the product price', function(done){
 				this.client.getText(this.selector.search_product_result_price).then(function(text) {
 					var my_price = text;
-					console.log(parseInt(my_price[1]));
-					should(parseInt(my_price[1])).be.equal(parseInt("6"));
+					should(my_price[1]).be.equal("$5.00");
 				})
-				console.log("test");
 				this.client.call(done);
 		});
 
@@ -71,7 +69,7 @@ describe('The Check of the Product in Front Office', function(){
 				})
 				.getText(this.selector.product_price_details).then(function(text) {
 					var my_price2 = text;
-					should(parseInt(my_price2)).be.equal(parseInt("6"));
+					should(my_price2).be.equal("$5.00");
 				})
 				.call(done);
 		});
