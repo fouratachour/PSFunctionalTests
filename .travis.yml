@@ -37,7 +37,7 @@ before_script:
   - npm install selenium-standalone@latest
   - cd node_modules/selenium-standalone/bin/
   - ./selenium-standalone install --drivers.chrome.version=2.29 --drivers.chrome.baseURL=https://chromedriver.storage.googleapis.com
-  - ./selenium-standalone start  &
+  - ./selenium-standalone start --debug  &
   - cd ../../..
   - npm install
   - export CHROME_BIN=/usr/bin/google-chrome
