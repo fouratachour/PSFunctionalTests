@@ -123,19 +123,19 @@ describe('The Purchase of a product', function(){
 				})
 				.getText(this.selector.command_total_price).then(function(text) {
 					var my_price_check = text;
-					should(my_price_check).be.equal("$12.00");
+					should(my_price_check).be.equal(my_price);
 				})
 				.click(this.selector.command_pay_bankwire)
 				.waitForExist(this.selector.command_price_step5_amout, 60000)
 				.getText(this.selector.command_price_step5_amout).then(function(text) {
 					var my_price_check2 = text;
-					should(my_price_check2).be.equal("$12.00");
+					should(my_price_check2).be.equal(my_price);
 				})
 				.click(this.selector.command_confirm_button)
 				.waitForExist(this.selector.command_success_alert, 60000)
 				.getText(this.selector.command_success_price).then(function(text) {
 					var my_price_check3 = text;
-					should(my_price_check3).be.equal("$12.00");
+					should(my_price_check3).be.equal(my_price);
 				})
 				.call(done);
 		});
