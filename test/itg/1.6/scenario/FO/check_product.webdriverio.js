@@ -18,7 +18,7 @@ describe('The Check of the Product in Front Office', function(){
 		it('should acces to the Front Office', function(done){
 			this.client
 				.url('http://' + URL)
-				.waitForExist(this.selector.logo_home_pageFO, 60000)
+				.waitForExist(this.selector.logo_home_pageFO, 10000)
 				.call(done);
 		});
 	});
