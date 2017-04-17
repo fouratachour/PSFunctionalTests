@@ -141,7 +141,7 @@ describe('The Product Creation', function(){
                 })
                 .chooseFile(this.selector.picture, toUpload)
                 .execute(function() {
-                    document.getElementById("#file-upload-button").style="";
+                    document.getElementsByClassName("well").style="";
                 })
                 .waitForExist(this.selector.upload_file_button, 60000)
                 .pause(2000)
@@ -156,7 +156,7 @@ describe('The Product Creation', function(){
                 .call(done);
         });
     });
-/*
+
     describe('Check the product in the catalog', function(done){
         it('should go to the catalog', function(done){
             this.client
@@ -281,6 +281,6 @@ describe('The Product Creation', function(){
                 .deleteCookie()
                 .call(done);
         });
-    });*/
+    });
 
 });
