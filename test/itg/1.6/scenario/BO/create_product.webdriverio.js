@@ -54,7 +54,7 @@ describe('The Product Creation', function(){
             global.fctname= this.test.title;
             this.client
                 .setValue(this.selector.product_name, 'test_nodejs_' + product_id)
-                .pause(60000)
+                .pause(20000)
                 .call(done);
         });
 
@@ -133,6 +133,7 @@ describe('The Product Creation', function(){
         it('should enter the product quantity', function(done){
             global.fctname= this.test.title;
             this.client
+                .pause(3000)
                 .click(this.selector.quantity)
                 .addValue(this.selector.quantity, "1000")
                 .call(done);
@@ -189,6 +190,7 @@ describe('The Product Creation', function(){
         it('should acces to the product page', function(done){
             global.fctname= this.test.title;
             this.client
+                .pause(3000)
                 .click(this.selector.edit_product)
                 .waitForExist(this.selector.product_name, 60000)
                 .call(done);
@@ -197,11 +199,11 @@ describe('The Product Creation', function(){
         it('should check the product name', function(done){
             global.fctname= this.test.title;
             this.client
+                .pause(20000)
                 .getValue(this.selector.product_name).then(function(text) {
                     var my_name = text;
                     should(my_name).be.equal('test_nodejs_' + product_id);
                 })
-                .pause(60000)
                 .call(done);
         });
 
