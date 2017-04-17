@@ -14,7 +14,7 @@ describe('The Purchase of a product', function(){
     process.on('uncaughtException', common.take_screenshot);
 	process.on('ReferenceError', common.take_screenshot);
 	after(common.after);
-
+		
 		/*it('loggin_FO', function(done){
             this.client
            		.signinFO()
@@ -59,7 +59,7 @@ describe('The Purchase of a product', function(){
 					global.my_quantity = text;
 				})
 				.click(this.selector.add_to_cart)
-				.waitForExist(this.selector.layer_cart, 60000)
+				.waitForExist(this.selector.layer_cart, 60000)				
 				.getText(this.selector.layer_cart_name_details).then(function(text) {
 					var my_cart_name_check = text;
 					should(my_cart_name_check).be.equal(my_name);
@@ -87,7 +87,7 @@ describe('The Purchase of a product', function(){
 	describe('Validate the cart', function(){
 		it('should validate the summary step (step 1)', function(done){
 		    global.fctname= this.test.title;
-			this.client
+			this.client			
 				.waitForExist(this.selector.command_button_checkout, 60000)
 				.click(this.selector.command_button_checkout)
 				.pause(3000)
@@ -147,7 +147,7 @@ describe('The Purchase of a product', function(){
 				})
 				.call(done);
 		});
-
+		
 		it('should get the order id', function(done){
 		    global.fctname= this.test.title;
 			this.client

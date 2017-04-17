@@ -28,7 +28,7 @@ module.exports = {
 		save_and_stay_product: '[name="submitAddproductAndStay"]',
 		save_button: '[name="submitAddproduct"]',
 		green_validation: '.alert.alert-success',
-		close_green_validation: '//*[@id="content"]/div[4]/div/button',
+		close_green_validation: '.alert.alert-success > .close',
 		menu: '#nav-sidebar',
 		number_of_products: ".badge",
 		summary: 'description_short_1_ifr', //not declare like an id because using into function "frame" that not need this information;
@@ -80,7 +80,7 @@ module.exports = {
 		create_account_email: '#email',
 		create_account_password: '#passwd',
 		create_account_info_validate: '#submitAccount',
-		logo_home_pageFO: '//*[@id="header_logo"]/a/img',
+		logo_home_pageFO: '.logo.img-responsive',
 		first_product_home_page: '.product_img_link',
 		details_first_product_home_page: '.button.lnk_view.btn.btn-default',
 		add_to_cart: '[name="Submit"]',

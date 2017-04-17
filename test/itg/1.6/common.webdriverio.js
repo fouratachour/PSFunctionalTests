@@ -7,7 +7,7 @@ var options = {
     logLevel: 'silent',
     waitForTimeout: 60000,
     desiredCapabilities: {
-        browserName: 'firefox',
+        browserName: 'chrome',
 	},
 	host: 'localhost',
 	port: 4444
@@ -17,7 +17,7 @@ var options2 = {
     logLevel: 'silent',
     waitForTimeout: 60000,
     desiredCapabilities: {
-        browserName: 'firefox',
+        browserName: 'chrome',
 		'tunnel-identifier': process.env.TRAVIS_JOB_NUMBER,
 		username: process.env.SAUCE_USERNAME,
 		access_key: process.env.SAUCE_ACCESS_KEY,
@@ -101,11 +101,6 @@ function initCommands(client) {
 		client.call(done);
 	});
 
-	client.addCommand('takeScreenshot', function(n){
-	    var date_time = new Date().getTime();
-	    client.saveScreenshot(__dirname + '/screenshots/' + date_time + '_'+n+'.png');
-	});
-
 }
 module.exports = {
     getClient: function () {
@@ -130,6 +125,9 @@ module.exports = {
     },
     after: function (done) {
             done();
+    },
+    take_screenshot: function (done) {
+        client.saveScreenshot(__dirname +'/screenshots/' + client.desiredCapabilities.browserName + '-Exception' + '_' + global.fctname + '.png');
     },
     initMocha: function () {
         this.timeout(100000);

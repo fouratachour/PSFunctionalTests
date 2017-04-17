@@ -6,36 +6,40 @@ var globals = require('../../globals.webdriverio.js');
 
 describe('The Check of the Product in Front Office', function(){
 	common.initMocha.call(this);
-
+	
 	before(function(done){
 		this.selector = globals.selector;
 		this.client.call(done);
 	});
-
+    process.on('uncaughtException', common.take_screenshot);
+	process.on('ReferenceError', common.take_screenshot);
 	after(common.after);
-
+		
 	describe('Open the shop', function(done){
 		it('should acces to the Front Office', function(done){
+		    global.fctname= this.test.title;
 			this.client
 				.url('http://' + URL)
-				.waitForExist(this.selector.logo_home_pageFO, 10000)
+				.waitForExist(this.selector.logo_home_pageFO, 60000)
 				.call(done);
 		});
 	});
 
 	describe('Check the product', function(done){
 		it('should search for the product', function(done){
+		    global.fctname= this.test.title;
 			this.client
-                .waitForExist(this.selector.search_product, 60000)
+                .waitForExist(this.selector.search_product, 60000)                                
                 .click(this.selector.search_product)
 				.setValue(this.selector.search_product, 'test_nodejs_' + product_id)
-				.pause(5000)
+				.pause(1000)
 				.click(this.selector.search_product_button)
 				.waitForExist(this.selector.search_product_result_name, 60000)
 				.call(done);
 		});
 
 		it('should check the product name', function(done){
+		    global.fctname= this.test.title;
 			this.client
 				.getText(this.selector.search_product_result_name).then(function(text) {
 					var my_name = text;
@@ -45,14 +49,17 @@ describe('The Check of the Product in Front Office', function(){
 		});
 
 		it('should check the product price', function(done){
-				this.client.getText(this.selector.search_product_result_price).then(function(text) {
+		    global.fctname= this.test.title;
+			this.client
+				.getText(this.selector.search_product_result_price).then(function(text) {
 					var my_price = text;
-					should(my_price[1]).be.equal("$5.00");
+					should(parseInt(my_price[1])).be.equal(parseInt("6"));
 				})
-				this.client.call(done);
+				.call(done);
 		});
 
 		it('should check the product details', function(done){
+		    global.fctname= this.test.title;
 			this.client
 				.moveToObject(this.selector.search_product_result_name)
 				.waitForExist(this.selector.search_product_details, 60000)
@@ -69,7 +76,7 @@ describe('The Check of the Product in Front Office', function(){
 				})
 				.getText(this.selector.product_price_details).then(function(text) {
 					var my_price2 = text;
-					should(my_price2).be.equal("6,00 €");
+					should(parseInt(my_price2)).be.equal(parseInt("6"));
 				})
 				.call(done);
 		});
