@@ -109,6 +109,7 @@ describe('The Product Creation', function(){
                 .click(this.selector.priceTE)
                 .pause(2000)
                 .setValue(this.selector.priceTE, "5")
+                .pause(2000)
                 .call(done);
 
         });
@@ -116,10 +117,9 @@ describe('The Product Creation', function(){
         it('should save and stay in the product page', function(done){
             global.fctname= this.test.title;
             this.client
-                .pause(2000)
                 .waitForExist(this.selector.save_and_stay_price, 60000)
                 .click(this.selector.save_and_stay_price)
-                .pause(2000)
+                .pause(1000)
                 .waitForExist(this.selector.close_green_validation, 60000)
                 .click(this.selector.close_green_validation)
                 .call(done);
@@ -135,11 +135,15 @@ describe('The Product Creation', function(){
         it('should enter the product quantity', function(done){
             global.fctname= this.test.title;
             this.client
-                .pause(3000)
-                .click(this.selector.quantity)
+                .pause(2000)
                 .addValue(this.selector.quantity, "1000")
+                .pause(5000)
+                .waitForExist(this.selector.save_and_stay_quantity, 60000)
+                .click(this.selector.save_and_stay_quantity)
+                .pause(5000)
                 .call(done);
         });
+
 
         it('should go to the product image settings', function(done){
             global.fctname= this.test.title;
@@ -269,10 +273,12 @@ describe('The Product Creation', function(){
         it('should check the product quantity', function(done){
             global.fctname= this.test.title;
             this.client
+                .pause(2000)
                 .getValue(this.selector.quantity).then(function(text) {
                     var my_quantity = text;
                     should(parseInt(my_quantity)).be.equal(parseInt("1000"))
                 })
+                .pause(2000)
                 .call(done);
         });
 
