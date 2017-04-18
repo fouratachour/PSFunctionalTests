@@ -41,7 +41,7 @@ module.exports = {
 		save_and_stay_price: '(//div[@id="product-prices"]/div/button[@class="btn btn-default pull-right"])[2]/i[@class="process-icon-save"]',
 		quantities_save_btn:'//*[@id="product-quantities"]/div[7]/button[1]',
 		product_quantity: '#link-Quantities',
-		quantity: '[name="qty_0"]',
+		quantity: '//*[@id="qty_0"]/input',
 		save_and_stay_quantity: '//*[@id="product-quantities"]/div[7]/button[2]',
 		close_false_error: '.growl-close',
 		product_picture: '#link-Images',

@@ -136,10 +136,13 @@ describe('The Product Creation', function(){
             global.fctname= this.test.title;
             this.client
                 .pause(2000)
+                .clearElement(this.selector.quantity)
+                .pause(2000)
+                .click(this.selector.quantity)
+                .pause(2000)
                 .addValue(this.selector.quantity, "1000")
-                .pause(5000)
-                .waitForExist(this.selector.save_and_stay_quantity, 60000)
-                .click(this.selector.save_and_stay_quantity)
+                .waitForExist('//*[@id="out_of_stock_3"]', 60000)
+                .click('//*[@id="out_of_stock_3"]')
                 .pause(5000)
                 .call(done);
         });
@@ -148,11 +151,12 @@ describe('The Product Creation', function(){
         it('should go to the product image settings', function(done){
             global.fctname= this.test.title;
             this.client
+                .pause(1000)
                 .click(this.selector.product_picture)
                 .waitForExist(this.selector.picture, 60000)
                 .call(done);
         });
-
+/*
         it('should set the product image', function(done){
             global.fctname= this.test.title;
             this.client
@@ -299,7 +303,7 @@ describe('The Product Creation', function(){
                     should(my_src_temp3[0]).be.equal(src_creation);
                 })
                 .call(done);
-        });
+        });*/
     });
 
     describe('Log out in Back Office', function(done){
