@@ -64,6 +64,7 @@ describe('The Check of the Product in Front Office', function(){
 		it('should check the product details', function(done){
 		    global.fctname= this.test.title;
 			this.client
+			    .pause(5000)
 				.getText(this.selector.product_result_name).then(function(text) {
 					var my_name_check = text;
 					should(my_name_check).be.equal('test_nodejs_' + product_id);
