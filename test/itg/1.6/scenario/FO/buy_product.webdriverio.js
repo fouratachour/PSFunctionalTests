@@ -37,9 +37,7 @@ describe('The Purchase of a product', function(){
 		        .waitForExist('//*[@id="blocknewproducts"]/li[1]/div/div[1]/div/a[1]', 60000)
                 .pause(5000)
                 .getAttribute('//*[@id="blocknewproducts"]/li[1]/div/div[1]/div/a[1]', "href").then(function(text) {
-                  console.log('testt'+text);
                   ProductUrl=text;
-                  console.log('hoooooooo'+ProductUrl);
                 })
 				.call(done);
 		});
@@ -113,8 +111,8 @@ describe('The Purchase of a product', function(){
                 .setValue(this.selector.loginFO, 'pub@prestashop.com')
                 .setValue(this.selector.passwordFO, '123456789')
                 .click(this.selector.login_btnFO)
-				*//*.waitForExist(this.selector.validate_address, 60000)
-				.click(this.selector.validate_address)*//*
+				/*.waitForExist(this.selector.validate_address, 60000)
+				.click(this.selector.validate_address)*/
 				.waitForExist(this.selector.command_button_checkout_step3, 60000)
 				.call(done);
 		});
