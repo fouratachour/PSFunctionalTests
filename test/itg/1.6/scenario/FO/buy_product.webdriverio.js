@@ -2,7 +2,7 @@
 var should = require('should');
 var common = require('../../common.webdriverio');
 var globals = require('../../globals.webdriverio.js');
-
+var ProductUrl;
 
 describe('The Purchase of a product', function(){
 	common.initMocha.call(this);
@@ -36,14 +36,27 @@ describe('The Purchase of a product', function(){
 			    .pause(5000)
 		        .waitForExist('//*[@id="blocknewproducts"]/li[1]/div/div[1]/div/a[1]', 60000)
                 .pause(5000)
-                .click('//*[@id="blocknewproducts"]/li[1]/div')
-		        .pause(5000)
-		        .waitForExist('//*[@id="center_column"]/div/div/div[3]/h1', 60000)
+                .getAttribute('//*[@id="blocknewproducts"]/li[1]/div/div[1]/div/a[1]', "href").then(function(text) {
+                  console.log('testt'+text);
+                  ProductUrl=text;
+                  console.log('hoooooooo'+ProductUrl);
+                })
+				.call(done);
+		});
+
+		it('should go to the product details page bibi', function(done){
+		   global.fctname= this.test.title;
+		    this.client
+			    .url( ProductUrl)
+			    .pause(5000)
+                .waitForExist('/*//*[@id="center_column"]/div/div/div[3]/h1', 60000)
 				.getText(this.selector.product_result_name).then(function(text) {
 					global.my_name = text;
 				})
-				.call(done);
+                .call(done);
+
 		});
+
 
         it('should add the product to the cart', function(done){
             global.fctname= this.test.title;
@@ -100,8 +113,8 @@ describe('The Purchase of a product', function(){
                 .setValue(this.selector.loginFO, 'pub@prestashop.com')
                 .setValue(this.selector.passwordFO, '123456789')
                 .click(this.selector.login_btnFO)
-				/*.waitForExist(this.selector.validate_address, 60000)
-				.click(this.selector.validate_address)*/
+				*//*.waitForExist(this.selector.validate_address, 60000)
+				.click(this.selector.validate_address)*//*
 				.waitForExist(this.selector.command_button_checkout_step3, 60000)
 				.call(done);
 		});
