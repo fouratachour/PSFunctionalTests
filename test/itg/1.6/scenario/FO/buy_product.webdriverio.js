@@ -33,13 +33,13 @@ describe('The Purchase of a product', function(){
 		it('should go to the product details page', function(done){
 		    global.fctname= this.test.title;
 			this.client
+			    .pause(5000)
 		        .waitForExist('//*[@id="blocknewproducts"]/li[1]/div/div[1]/div/a[1]', 60000)
                 .pause(5000)
                 .click('//*[@id="blocknewproducts"]/li[1]/div')
 		        .pause(5000)
 				.getText(this.selector.product_result_name).then(function(text) {
 					global.my_name = text;
-					console.log(text)
 				})
 				.call(done);
 		});

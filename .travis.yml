@@ -52,8 +52,10 @@ script:
   - curl http://localhost/
 
 after_script:
-  - docker logs prestashop
-  - google-chrome --version
+ - docker logs prestashop
+ - cd ../../..
+ - chmod 777 bin/upload.sh
+ - ./bin/upload.sh
+ - google-chrome --version
 
 after_failure:
-
