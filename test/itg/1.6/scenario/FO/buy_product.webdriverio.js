@@ -38,6 +38,7 @@ describe('The Purchase of a product', function(){
                 .pause(5000)
                 .click('//*[@id="blocknewproducts"]/li[1]/div')
 		        .pause(5000)
+		        .waitForExist('//*[@id="center_column"]/div/div/div[3]/h1', 60000)
 				.getText(this.selector.product_result_name).then(function(text) {
 					global.my_name = text;
 				})

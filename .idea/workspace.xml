@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0d3a0ec7-459e-4954-8917-ffd9985fefd5" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/itg/1.6/globals.webdriverio.js" afterPath="$PROJECT_DIR$/test/itg/1.6/globals.webdriverio.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/itg/1.6/index.webdriverio.js" afterPath="$PROJECT_DIR$/test/itg/1.6/index.webdriverio.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/itg/1.6/scenario/FO/buy_product.webdriverio.js" afterPath="$PROJECT_DIR$/test/itg/1.6/scenario/FO/buy_product.webdriverio.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -15,11 +14,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="buy_product.webdriverio.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="buy_product.webdriverio.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/itg/1.6/scenario/FO/buy_product.webdriverio.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="555">
-              <caret line="49" column="59" lean-forward="false" selection-start-line="49" selection-start-column="39" selection-end-line="49" selection-end-column="59" />
+            <state relative-caret-position="393">
+              <caret line="40" column="82" lean-forward="true" selection-start-line="40" selection-start-column="82" selection-end-line="40" selection-end-column="82" />
               <folding />
             </state>
           </provider>
@@ -28,14 +27,14 @@
       <file leaf-file-name="globals.webdriverio.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/itg/1.6/globals.webdriverio.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="291">
-              <caret line="89" column="73" lean-forward="false" selection-start-line="89" selection-start-column="73" selection-end-line="89" selection-end-column="73" />
+            <state relative-caret-position="389">
+              <caret line="112" column="15" lean-forward="true" selection-start-line="112" selection-start-column="15" selection-end-line="112" selection-end-column="15" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.webdriverio.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.webdriverio.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/itg/1.6/index.webdriverio.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="486">
@@ -77,8 +76,8 @@
       <find>wholesale_price</find>
       <find>this.selector.validate_address</find>
       <find>//*[@id=&quot;center_column&quot;]/div/div/div[3]/h1</find>
-      <find>product_result_name</find>
       <find>product_name_details</find>
+      <find>product_result_name</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/test/itg/1.6</dir>
@@ -110,11 +109,11 @@
         <option value="$PROJECT_DIR$/test/itg/1.6/scenario/FO/create_account.webdriverio.js" />
         <option value="$PROJECT_DIR$/test/itg/1.6/scenario/BO/create_product.webdriverio.js" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/test/itg/1.6/scenario/FO/buy_product.webdriverio.js" />
         <option value="$PROJECT_DIR$/bin/upload.sh" />
         <option value="$PROJECT_DIR$/.travis.yml" />
         <option value="$PROJECT_DIR$/test/itg/1.6/globals.webdriverio.js" />
         <option value="$PROJECT_DIR$/test/itg/1.6/index.webdriverio.js" />
+        <option value="$PROJECT_DIR$/test/itg/1.6/scenario/FO/buy_product.webdriverio.js" />
       </list>
     </option>
   </component>
@@ -386,6 +385,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1919" y="0" width="1922" height="1081" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34578443" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -394,7 +394,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.40356395" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17714885" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -728,26 +728,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/itg/1.6/scenario/FO/buy_product.webdriverio.js">
+    <entry file="file://$PROJECT_DIR$/test/itg/1.6/index.webdriverio.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="49" column="59" lean-forward="false" selection-start-line="49" selection-start-column="39" selection-end-line="49" selection-end-column="59" />
+        <state relative-caret-position="486">
+          <caret line="30" column="6" lean-forward="false" selection-start-line="30" selection-start-column="6" selection-end-line="30" selection-end-column="6" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/itg/1.6/globals.webdriverio.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="89" column="73" lean-forward="false" selection-start-line="89" selection-start-column="73" selection-end-line="89" selection-end-column="73" />
+        <state relative-caret-position="389">
+          <caret line="112" column="15" lean-forward="true" selection-start-line="112" selection-start-column="15" selection-end-line="112" selection-end-column="15" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/itg/1.6/index.webdriverio.js">
+    <entry file="file://$PROJECT_DIR$/test/itg/1.6/scenario/FO/buy_product.webdriverio.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="30" column="6" lean-forward="false" selection-start-line="30" selection-start-column="6" selection-end-line="30" selection-end-column="6" />
+        <state relative-caret-position="393">
+          <caret line="40" column="82" lean-forward="true" selection-start-line="40" selection-start-column="82" selection-end-line="40" selection-end-column="82" />
           <folding />
         </state>
       </provider>
