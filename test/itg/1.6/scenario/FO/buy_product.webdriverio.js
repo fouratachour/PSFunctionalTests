@@ -30,7 +30,7 @@ describe('The Purchase of a product', function(){
                 .call(done);
 		});
 
-		it('should go to the product details page', function(done){
+		it('Get url of product detail', function(done){
 		    global.fctname= this.test.title;
 			this.client
 			    .pause(5000)
@@ -42,7 +42,7 @@ describe('The Purchase of a product', function(){
 				.call(done);
 		});
 
-		it('should go to the product details page bibi', function(done){
+		it('should go to the product details page ', function(done){
 		   global.fctname= this.test.title;
 		    this.client
 			    .url( ProductUrl)
