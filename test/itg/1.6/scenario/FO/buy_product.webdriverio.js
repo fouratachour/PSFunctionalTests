@@ -33,15 +33,13 @@ describe('The Purchase of a product', function(){
 		it('should go to the product details page', function(done){
 		    global.fctname= this.test.title;
 			this.client
-				.click(this.selector.logo_home_pageFO)
-				.waitForExist(this.selector.first_product_home_page, 60000)
-				.getText(this.selector.first_product_home_page_name).then(function(text) {
-					global.my_name = text[1];
+		        .waitForExist('//*[@id="blocknewproducts"]/li[1]/div/div[1]/div/a[1]', 60000)
+                .pause(5000)
+                .click('//*[@id="blocknewproducts"]/li[1]/div')
+		        .pause(5000)
+				.getText(this.selector.product_result_name).then(function(text) {
+					global.my_name = text;
 				})
-				.moveToObject(this.selector.first_product_home_page)
-				.waitForExist(this.selector.details_first_product_home_page, 60000)
-				.click(this.selector.details_first_product_home_page)
-				.waitForExist(this.selector.first_product_home_page_name, 60000)
 				.call(done);
 		});
 

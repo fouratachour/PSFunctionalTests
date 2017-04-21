@@ -156,7 +156,7 @@ describe('The Product Creation', function(){
                 .waitForExist(this.selector.picture, 60000)
                 .call(done);
         });
-/*
+
         it('should set the product image', function(done){
             global.fctname= this.test.title;
             this.client
@@ -303,7 +303,7 @@ describe('The Product Creation', function(){
                     should(my_src_temp3[0]).be.equal(src_creation);
                 })
                 .call(done);
-        });*/
+        });
     });
 
     describe('Log out in Back Office', function(done){

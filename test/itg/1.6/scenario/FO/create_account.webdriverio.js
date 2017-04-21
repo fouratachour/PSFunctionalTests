@@ -69,8 +69,11 @@ describe('The creation of an account in Front Office', function(){
 			this.client
 				.click(this.selector.access_loginFO)
 				.waitForExist(this.selector.loginFO, 60000)
+				.pause(1000)
 				.setValue(this.selector.loginFO, new_customer_email)
+				.pause(1000)
 				.setValue(this.selector.passwordFO, '123456789')
+				.pause(1000)
 				.click(this.selector.login_btnFO)
 				.waitForExist(this.selector.logo_home_pageFO, 60000)
 				.call(done);
