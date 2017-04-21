@@ -11,6 +11,7 @@ function runScenario() {
 	before(function(done){
 		this.selector = globals.selector;
 		this.client.call(done);
+   });
 	});
 	after(common.after);
     describe('Step 1 : Choosing language', function(){

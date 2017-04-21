@@ -7,7 +7,7 @@ var options = {
     logLevel: 'silent',
     waitForTimeout: 60000,
     desiredCapabilities: {
-        browserName: 'firefox',
+        browserName: browser,
 	},
 	host: 'localhost',
 	port: 4444
@@ -17,7 +17,7 @@ var options2 = {
     logLevel: 'silent',
     waitForTimeout: 60000,
     desiredCapabilities: {
-        browserName: 'firefox',
+        browserName: browser,
 		'tunnel-identifier': process.env.TRAVIS_JOB_NUMBER,
 		username: process.env.SAUCE_USERNAME,
 		access_key: process.env.SAUCE_ACCESS_KEY,

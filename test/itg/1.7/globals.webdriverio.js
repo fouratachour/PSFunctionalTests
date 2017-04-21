@@ -3,10 +3,11 @@ var common = require('./common.webdriverio');
 var path = require('path');
 var should = require('should');
 var argv = require('minimist')(process.argv.slice(2));
-var date_time = new Date().getTime();
 
+global.date_time = new Date().getTime();
 global.URL = argv.URL;
 global.module_tech_name = argv.MODULE;
+global.browser = argv.browser;
 global.saucelabs = argv.SAUCELABS;
 global._projectdir = path.join(__dirname, '..', '..');
 global.product_id=new Date().getTime();
@@ -58,13 +59,16 @@ module.exports = {
 		new_profil: '.employee-dropdown.dropdown > div',
 		logout: '#header_logout',
 		products: '#subtab-AdminCatalog',
-		go_to_catalog: '//*[@id="product_form_save_go_to_catalog_btn"]',
+		go_to_catalog: '//*[@id="form"]/div[4]/div[2]/div/div[2]/a[2]',
+		more_option:'[class="btn btn-primary dropdown-toggle"]',
 		new_product: '#page-header-desc-configuration-add',
 		menu: '#nav-sidebar',
 		product_name: '#form_step1_name_1',
-		save_product: '//*[@id="submit"]',
+		save_product: '//*[@id="form"]/div[4]/div[2]/div/button[1]',
 		catalog_list: '#product_catalog_list',
-		green_validation: '#main-div > div.content-div > div > div > div.flash-message-list.alert.alert-success > ul > li',
+		//green_validation: '#main-div > div.content-div > div.row > div > div.flash-message-list.alert.alert-success > ul > li',
+		//for 1.7.1.0
+		green_validation: '#growls > div > div.growl-message',
 		close_green_validation: '.growl-close',
 		red_validation:'#main-div > div.content-div > div > div > div.flash-message-list.alert.alert-danger > ul > li',
 		summary_button: '[href="#description_short"]',
@@ -95,8 +99,8 @@ module.exports = {
 		close_sf_toolbar:'//a[@class="hide-button"]',
 
 	//FO
-		access_loginFO:'//*[@id="_desktop_user_info"]/div/a',
-		loginFO: '[name="email"]',
+		access_loginFO:'div.user-info > a',
+		loginFO: '//*[@id="login-form"]/section/div[1]/div[1]/input',
 		passwordFO: '//*[@id="login-form"]/section/div[2]/div[1]/div/input',
 		login_btnFO: '//*[@id="login-form"]/footer/button',
 		logoutFO: '.logout',
@@ -107,11 +111,11 @@ module.exports = {
 		create_account_email: '[name="email"]',
 		create_account_password: '[name="password"]',
 		create_account_info_validate: '[data-link-action="save-customer"]',
-		logo_home_pageFO: '//*[@id="_desktop_logo"]/a/img',
+		logo_home_pageFO: '.logo.img-responsive',
 		first_product_home_page: '.thumbnail.product-thumbnail',
 		add_to_cart: '.btn.btn-primary.add-to-cart',
 		first_product_home_page_name: '[itemprop="name"]',
-		product_image: '//*[@id="content"]',
+		product_image: '#content',
 		product_name_details: '//*[@id="main"]/div[1]/div[2]/h1',
 		product_price_details: '[itemprop="price"]',
 		product_quantity_details: '#quantity_wanted',
@@ -120,6 +124,8 @@ module.exports = {
 		layer_cart_price_details: '//div[@id="blockcart-modal"]/div/div/div[2]/div/div[1]/div/div[2]/p[1]',
 		layer_cart_quantity_details: '//div[@id="blockcart-modal"]/div/div/div[2]/div/div[1]/div/div[2]/p[2]',
 		layer_cart_command_button: '//*[@id="blockcart-modal"]/div/div/div[2]/div/div[2]/div/div/a',
+		//for 1.7.1.0
+		//layer_cart_command_button: '//div[@id="blockcart-modal"]/div/div/div[2]/div/div[2]/div/div/a',
 		//command_product_quantity: '//div[@class="product-line-grid-body col-md-5 col-xs-5"]/div[5]',
 		command_product_name: '(//div[@class="product-line-info"])[1]/a',
 		command_product_price: '(//div[@class="product-line-info"])[2]/span',
@@ -133,11 +139,9 @@ module.exports = {
 		checkout_step4_payment: '//*[@id="payment-option-2"]',
 		checkout_step4_cgv: '//input[@id="conditions_to_approve[terms-and-conditions]"]',
 		checkout_step4_order: '#payment-confirmation >div > button',
-		checkout_total: '//div[@class="cart-summary-line cart-total"]/span[2]', 
-		//order_confirmation_name: '#order-items > table:nth-child(2) > tbody > tr > td:nth-child(2)',
-		order_confirmation_name: '(//div[@class="order-confirmation-table"]/div)/div[2]/span',
-		//order_confirmation_price1: '#order-items > table:nth-child(4) > tbody > tr.font-weight-bold > td:nth-child(2)',
-		order_confirmation_price1: '//*[@id="order-items"]/div/table/tbody/tr[3]/td[2]',
+		checkout_total: '//div[@class="cart-summary-line cart-total"]/span[2]',
+		order_confirmation_name: '#order-items > div > div > div.col-sm-4.col-xs-9.details > span',
+		order_confirmation_price1: '#order-items > div > table > tbody > tr:nth-child(1) > td:nth-child(2)',
 		order_confirmation_price2: '#content-hook_payment_return > div > div > div > dl > dd:nth-child(2)',
 		order_confirmation_ref: '(//div[@id="order-details"]/ul/li)[1]',
 		search_product: '.ui-autocomplete-input',

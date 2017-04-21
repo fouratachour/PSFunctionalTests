@@ -41,7 +41,6 @@ describe('The Product Creation', function(){
 				    .click(this.selector.exit_welcome);
 			}
 			this.client
-			    .pause(5000)
 				.waitForExist(this.selector.menu, 90000)
 				.click(this.selector.products)
 				.waitForExist(this.selector.new_product, 90000)
@@ -148,6 +147,13 @@ describe('The Product Creation', function(){
 			    .call(done);
 		});
 
+		it('should save product', function(done){
+		    global.fctname= this.test.title;
+	        this.client
+			    .waitForExist(this.selector.save_product, 90000)
+			    .click(this.selector.save_product)
+			    .call(done);
+	    });
 	    it('should close green validation', function(done){
 	        global.fctname= this.test.title;
 	        this.client
@@ -155,21 +161,14 @@ describe('The Product Creation', function(){
 				.click(this.selector.close_green_validation)
 				.call(done);
 		});
-		
-/*		it('should save product', function(done){
-		    global.fctname= this.test.title;
-	        this.client
-			    .waitForExist(this.selector.save_product, 90000)
-			    .click(this.selector.save_product)
-			    .call(done);
-	    });*/
-	    
      });
 	 describe('Check the product in the catalog', function(done){
         it('should go to the catalog', function(done){
         global.fctname= this.test.title;
 			this.client
-				.pause(2000)
+			    .pause(5000)
+			    .waitForExist(this.selector.more_option, 90000)
+                .click(this.selector.more_option)
 			    .waitForExist(this.selector.go_to_catalog, 90000)
                 .click(this.selector.go_to_catalog)
                 .call(done);
@@ -278,6 +277,8 @@ describe('The Product Creation', function(){
 			});
 	   });
 
+
+		
 	describe('Log out in Back Office', function(done){
         it('should log out successfully in BO', function(done){
             global.fctname= this.test.title;
