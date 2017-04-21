@@ -117,11 +117,12 @@ describe('The Product Creation', function(){
         it('should save and stay in the product page', function(done){
             global.fctname= this.test.title;
             this.client
-                .waitForExist(this.selector.save_and_stay_price, 60000)
+//                .waitForExist(this.selector.save_and_stay_price, 60000)
                 .click(this.selector.save_and_stay_price)
-                .pause(1000)
+                .pause(2000)
                 .waitForExist(this.selector.close_green_validation, 60000)
                 .click(this.selector.close_green_validation)
+                .pause(1000)
                 .call(done);
         });
 
