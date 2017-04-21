@@ -39,6 +39,7 @@ describe('The Purchase of a product', function(){
 		        .pause(5000)
 				.getText(this.selector.product_result_name).then(function(text) {
 					global.my_name = text;
+					console.log(text)
 				})
 				.call(done);
 		});

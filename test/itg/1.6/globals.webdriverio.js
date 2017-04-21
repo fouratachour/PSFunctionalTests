@@ -110,7 +110,7 @@ module.exports = {
 		search_product_button: '[name="submit_search"]',
 		search_product_result_image: '[itemprop="image"]',
 		search_product_result_name: '//*[@id="center_column"]/ul/li/div/div[2]/h5/a',
-		product_result_name:'[itemprop="name"]',
+		product_result_name:'//*[@id="center_column"]/div/div/div[3]/h1',
 		search_product_result_price: '.price.product-price',
 		product_result_price:'[itemprop="price"]',
 		search_product_details: '.button.lnk_view.btn.btn-default',
