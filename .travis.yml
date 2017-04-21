@@ -5,6 +5,7 @@ services:
   - mysql
 
 addons:
+    firefox: "52.0.2"
     apt:
       packages:
         - postfix
