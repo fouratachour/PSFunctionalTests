@@ -87,7 +87,7 @@ module.exports = {
 		add_to_cart: '[name="Submit"]',
 		cart_label: '#columns > div.breadcrumb.clearfix',
 		first_product_home_page_name: '.product-name',
-		product_name_details: '[itemprop="name"]',
+		product_name_details: '//*[@id="center_column"]/div/div/div[3]/h1',
 		product_price_details: '#our_price_display',
 		product_quantity_details: '#quantity_wanted',
         layer_cart: '//div[@id="layer_cart" and contains(@style, "display: block;")]',
