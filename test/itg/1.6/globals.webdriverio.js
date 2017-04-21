@@ -38,7 +38,7 @@ module.exports = {
 		priceTE: '#priceTE',
 		priceTI: '#priceTI',
 		//save_and_stay_price: '#product-prices > div.panel-footer > button:nth-child(3)',
-		save_and_stay_price: '(//div[@id="product-prices"]/div/button[@class="btn btn-default pull-right"])[2]/i[@class="process-icon-save"]',
+		save_and_stay_price: '//*[@id="product-prices"]/div[10]/button[2]',
 		quantities_save_btn:'//*[@id="product-quantities"]/div[7]/button[1]',
 		product_quantity: '#link-Quantities',
 		quantity: '//*[@id="qty_0"]/input',
