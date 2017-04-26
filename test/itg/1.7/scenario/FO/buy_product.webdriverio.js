@@ -3,6 +3,8 @@ var should = require('should');
 var common = require('../../common.webdriverio');
 var globals = require('../../globals.webdriverio.js');
 
+
+
 describe('The Purchase of a product', function(){
 	common.initMocha.call(this);
 	
@@ -30,7 +32,7 @@ describe('The Purchase of a product', function(){
 		});
 		
 	describe('Add product to cart', function(done){
-		it('should go to the product details', function(done){
+        it('should go to the product details', function(done){
 		    global.fctname= this.test.title;
 			this.client
 			    .waitForExist(this.selector.logo_home_pageFO, 90000)
@@ -69,12 +71,13 @@ describe('The Purchase of a product', function(){
 			    .call(done);
 		});
 
-		it('should click add to cart button ', function(done){
+	    it('should click add to cart button ', function(done){
 		    global.fctname= this.test.title;
 			this.client
 				.click(this.selector.layer_cart_command_button)
 				.call(done);
 		});
+
 	});
 		
 	describe('Validate the cart', function(){
@@ -174,6 +177,7 @@ describe('The Purchase of a product', function(){
 					})
 				.call(done);
 		});
+
 	});
 		
 	describe('Log out in Front Office', function(done){

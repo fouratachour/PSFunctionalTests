@@ -12,7 +12,8 @@ global.saucelabs = argv.SAUCELABS;
 global._projectdir = path.join(__dirname, '..', '..');
 global.product_id=new Date().getTime();
 global.new_customer_email = 'pub' + date_time + '@prestashop.com';
-
+global.my_src_image1 = "";
+global.my_src_image2 = "";
 module.exports = {
     selector: {
 	//Installation

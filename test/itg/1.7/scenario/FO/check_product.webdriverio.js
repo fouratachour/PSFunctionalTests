@@ -24,7 +24,10 @@ describe('The Check of the Product in Front Office', function(){
 	});
 
 	describe('Check the product', function(done){
-		it('should search for the product', function(done){
+
+
+
+	it('should search for the product', function(done){
 		    global.fctname= this.test.title;
 			this.client
 				.waitForExist(this.selector.search_product, 90000)
@@ -33,7 +36,7 @@ describe('The Check of the Product in Front Office', function(){
 				.call(done);
 		});
 
-        it('should check the product name', function(done){
+       it('should check the product name', function(done){
             global.fctname= this.test.title;
 			this.client
 				.waitForExist(this.selector.search_product_result_name, 90000)
