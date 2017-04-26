@@ -29,7 +29,7 @@ matrix:
 
 before_install:
   - wget http://www.slimjetbrowser.com/chrome/lnx/chrome64_54.0.2840.71.deb
-  - sudo dpkg -i google-chrome*.deb
+  - sudo dpkg -i chrome*.deb
 
 before_script:
   - docker run --name=mysql -e MYSQL_ROOT_PASSWORD=doge -e MYSQL_DATABASE=prestashop -tid mysql
