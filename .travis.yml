@@ -28,7 +28,7 @@ matrix:
   fast_finish: true
 
 before_install:
-  - wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+  - wget http://www.slimjetbrowser.com/chrome/lnx/chrome64_54.0.2840.71.deb
   - sudo dpkg -i google-chrome*.deb
 
 before_script:
