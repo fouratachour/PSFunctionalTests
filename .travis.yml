@@ -6,7 +6,6 @@ services:
 
 addons:
     firefox: "52.0.2"
-    chrome: "54.0.2840.71"
     apt:
       packages:
         - postfix
@@ -28,6 +27,9 @@ env:
 matrix:
   fast_finish: true
 
+before_install:
+  - wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+  - sudo dpkg -i google-chrome*.deb
 
 before_script:
   - docker run --name=mysql -e MYSQL_ROOT_PASSWORD=doge -e MYSQL_DATABASE=prestashop -tid mysql
