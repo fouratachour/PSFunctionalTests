@@ -38,9 +38,22 @@ describe('The Check of the order in Back Office', function(){
         it('fixing mail  Parameters', function(done){
             global.fctname= this.test.title;
 		    this.client
+                .waitForExist('//*[@id="conf_id_PS_MAIL_METHOD"]/div/p[2]/label', 90000)
+		        .setValue('//*[@id="conf_id_PS_MAIL_METHOD"]/div/p[2]/label', 'localhost')
+		        .pause(2000)
 		        .waitForExist('//*[@id="conf_id_PS_MAIL_SERVER"]/div/input', 90000)
 		        .setValue('//*[@id="conf_id_PS_MAIL_SERVER"]/div/input', 'localhost')
 		        .pause(2000)
+
+		        .waitForExist('//*[@id="conf_id_PS_MAIL_USER"]/div/input', 90000)
+		        .setValue('//*[@id="conf_id_PS_MAIL_USER"]/div/input', 'demo@presta.com')
+		        .pause(2000)
+
+		        .waitForExist('//*[@id="conf_id_PS_MAIL_PASSWD"]/div/input', 90000)
+		        .setValue('//*[@id="conf_id_PS_MAIL_PASSWD"]/div/input', '123456789')
+		        .pause(2000)
+
+
                 .waitForExist('//*[@id="conf_id_PS_MAIL_SMTP_PORT"]/div/input', 90000)
 		        .setValue('//*[@id="conf_id_PS_MAIL_SMTP_PORT"]/div/input', '1025')
 		        .pause(2000)
