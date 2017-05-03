@@ -33,6 +33,7 @@ describe('The Check of the order in Back Office', function(){
                 .click('//*[@id="subtab-AdminEmails"]/a')
                 .pause(2000)
                 .click('//*[@id="mail_fieldset_test"]/div[4]/button')
+                .waitForExist('//*[@id="mailResultCheck"]',10000);
                 .call(done);
 	    });
 
