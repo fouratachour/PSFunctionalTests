@@ -34,7 +34,8 @@ describe('Allscenario', function(){
 	//create an order in FO and check it in BO
 	//require('./scenario/FO/buy_product.webdriverio');
 	//require('./scenario/FO/check_module_notification.webdriverio');
-	require('./scenario/BO/invoiceterms.webdriverio');
+	//require('./scenario/BO/invoiceterms.webdriverio');
+	require('./scenario/BO/email_module.webdriverio');
 	//require('./scenario/BO/check_order.webdriverio');
 
 	//create an account in FO
