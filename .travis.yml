@@ -38,6 +38,7 @@ before_script:
   - npm install
   - npm install maildev -g
   - maildev &
+  - sleep 10
   - npm install selenium-standalone@latest
   - cd node_modules/selenium-standalone/bin/
   - ./selenium-standalone install
