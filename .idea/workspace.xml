@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0d3a0ec7-459e-4954-8917-ffd9985fefd5" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/itg/1.7/screenshots/chrome-Exception_fixing mail  Parameters.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/itg/1.7/screenshots/chrome-Exception_should go to Advanced Parameters.png" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/itg/1.7/scenario/BO/email_module.webdriverio.js" afterPath="$PROJECT_DIR$/test/itg/1.7/scenario/BO/email_module.webdriverio.js" />
     </list>
@@ -68,8 +70,8 @@
       <file leaf-file-name="email_module.webdriverio.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/itg/1.7/scenario/BO/email_module.webdriverio.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="287">
-              <caret line="41" column="14" lean-forward="true" selection-start-line="41" selection-start-column="14" selection-end-line="41" selection-end-column="14" />
+            <state relative-caret-position="377">
+              <caret line="73" column="16" lean-forward="true" selection-start-line="73" selection-start-column="16" selection-end-line="73" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -776,8 +778,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/itg/1.7/scenario/BO/email_module.webdriverio.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="41" column="14" lean-forward="true" selection-start-line="41" selection-start-column="14" selection-end-line="41" selection-end-column="14" />
+        <state relative-caret-position="377">
+          <caret line="73" column="16" lean-forward="true" selection-start-line="73" selection-start-column="16" selection-end-line="73" selection-end-column="16" />
           <folding />
         </state>
       </provider>
