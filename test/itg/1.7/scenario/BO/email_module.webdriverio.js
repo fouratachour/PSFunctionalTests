@@ -29,7 +29,7 @@ describe('The Check of the order in Back Office', function(){
 		    this.client
 		        .moveToObject('//*[@id="subtab-AdminAdvancedParameters"]/a')
                 .click('//*[@id="subtab-AdminEmails"]/a')
-                .pause(2000)
+                .waitForExist('//*[@id="mail_fieldset_test"]/div[4]/button', 90000)
                 .click('//*[@id="mail_fieldset_test"]/div[4]/button')
                 .waitForExist('//*[@id="mailResultCheck"]',10000)
                 .call(done);
@@ -38,10 +38,12 @@ describe('The Check of the order in Back Office', function(){
         it('fixing mail  Parameters', function(done){
             global.fctname= this.test.title;
 		    this.client
-                .waitForExist('//*[@id="conf_id_PS_MAIL_METHOD"]/div/p[2]/label', 90000)
-		        .setValue('//*[@id="conf_id_PS_MAIL_METHOD"]/div/p[2]/label', 'localhost')
-		        .pause(2000)
-		        .waitForExist('//*[@id="conf_id_PS_MAIL_SERVER"]/div/input', 90000)
+
+                .waitForExist('//*[@id="PS_MAIL_METHOD_2"]',10000)
+		        .click('//*[@id="PS_MAIL_METHOD_2"]')
+		        .pause(3000)
+
+		         .waitForExist('//*[@id="conf_id_PS_MAIL_SERVER"]/div/input', 90000)
 		        .setValue('//*[@id="conf_id_PS_MAIL_SERVER"]/div/input', 'localhost')
 		        .pause(2000)
 
