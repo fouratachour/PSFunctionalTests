@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0d3a0ec7-459e-4954-8917-ffd9985fefd5" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/itg/1.7/screenshots/chrome-Exception_fixing mail  Parameters.png" afterPath="$PROJECT_DIR$/test/itg/1.7/screenshots/chrome-Exception_fixing mail  Parameters.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/itg/1.7/screenshots/chrome-Exception_should go to Advanced Parameters.png" afterPath="$PROJECT_DIR$/test/itg/1.7/screenshots/chrome-Exception_should go to Advanced Parameters.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/itg/1.7/scenario/BO/email_module.webdriverio.js" afterPath="$PROJECT_DIR$/test/itg/1.7/scenario/BO/email_module.webdriverio.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -50,8 +47,8 @@
       <file leaf-file-name="email_module.webdriverio.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/itg/1.7/scenario/BO/email_module.webdriverio.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="43" column="72" lean-forward="false" selection-start-line="43" selection-start-column="72" selection-end-line="43" selection-end-column="72" />
+            <state relative-caret-position="534">
+              <caret line="45" column="83" lean-forward="false" selection-start-line="45" selection-start-column="83" selection-end-line="45" selection-end-column="83" />
               <folding />
             </state>
           </provider>
@@ -61,7 +58,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>save_and_stay_price</find>
       <find>should save and stay in the product page</find>
       <find>should enter the product price information</find>
       <find>wholesale_price</find>
@@ -91,6 +87,7 @@
       <find>fctname</find>
       <find>done</find>
       <find>mail_fieldset_smtp</find>
+      <find>//*[@id=&quot;mail_fieldset_test&quot;]/div[4]/button</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$</dir>
@@ -756,8 +753,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/itg/1.7/scenario/BO/email_module.webdriverio.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="43" column="72" lean-forward="false" selection-start-line="43" selection-start-column="72" selection-end-line="43" selection-end-column="72" />
+        <state relative-caret-position="534">
+          <caret line="45" column="83" lean-forward="false" selection-start-line="45" selection-start-column="83" selection-end-line="45" selection-end-column="83" />
           <folding />
         </state>
       </provider>

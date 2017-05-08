@@ -29,8 +29,6 @@ describe('The Check of email send', function(){
 		    this.client
 		        .moveToObject('//*[@id="subtab-AdminAdvancedParameters"]/a')
                 .click('//*[@id="subtab-AdminEmails"]/a')
-                .waitForExist('//*[@id="mail_fieldset_test"]/div[4]/button', 90000)
-                .click('//*[@id="mail_fieldset_test"]/div[4]/button')
                 .waitForExist('//*[@id="mailResultCheck"]',10000)
                 .pause(3000)
                 .call(done);
@@ -45,7 +43,7 @@ describe('The Check of email send', function(){
 		        .pause(3000)
 
 		        .waitForExist('//*[@id="conf_id_PS_MAIL_SERVER"]/div/input', 90000)
-		        .setValue('//*[@id="conf_id_PS_MAIL_SERVER"]/div/input', '0.0.0.0')
+		        .setValue('//*[@id="conf_id_PS_MAIL_SERVER"]/div/input', 'localhost')
 		        .pause(2000)
 
 		        .waitForExist('//*[@id="conf_id_PS_MAIL_USER"]/div/input', 90000)
@@ -66,6 +64,7 @@ describe('The Check of email send', function(){
 
                 .click('//*[@id="mail_fieldset_test"]/div[4]/button')
                 .waitForExist('//*[@id="mailResultCheck"]', 90000)
+                .pause(2000)
                 .getText('//*[@id="mailResultCheck"]').then(function(text) {
 					var my_text_check = text;
 					should(my_text_check).be.equal('A test email has been sent to the email address you provided.');
@@ -74,9 +73,6 @@ describe('The Check of email send', function(){
                 .call(done);
 	    });
 
-	});
-
- /*   describe('verify Send email test', function(done){
 
         it('should go to mailDev Parameters', function(done){
             global.fctname= this.test.title;
@@ -93,7 +89,10 @@ describe('The Check of email send', function(){
                 .call(done);
 	    });
 
-	});*/
+
+	});
+
+
 	
 	describe('Log out in Back Office', function(done){
         it('should log out successfully in BO', function(done){
