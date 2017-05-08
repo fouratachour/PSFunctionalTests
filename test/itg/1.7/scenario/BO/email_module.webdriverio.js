@@ -38,12 +38,12 @@ describe('The Check of the order in Back Office', function(){
         it('fixing mail  Parameters', function(done){
             global.fctname= this.test.title;
 		    this.client
-
+                .pause(3000)
                 .waitForExist('//*[@id="PS_MAIL_METHOD_2"]',10000)
 		        .click('//*[@id="PS_MAIL_METHOD_2"]')
 		        .pause(3000)
 
-		         .waitForExist('//*[@id="conf_id_PS_MAIL_SERVER"]/div/input', 90000)
+		        .waitForExist('//*[@id="conf_id_PS_MAIL_SERVER"]/div/input', 90000)
 		        .setValue('//*[@id="conf_id_PS_MAIL_SERVER"]/div/input', 'localhost')
 		        .pause(2000)
 
@@ -62,6 +62,10 @@ describe('The Check of the order in Back Office', function(){
 
 		        .click('//*[@id="mail_fieldset_smtp"]/div[3]/button')
 		        .pause(4000)
+
+                .click('//*[@id="mail_fieldset_test"]/div[4]/button')
+		        .pause(4000)
+
                 .call(done);
 	    });
 
