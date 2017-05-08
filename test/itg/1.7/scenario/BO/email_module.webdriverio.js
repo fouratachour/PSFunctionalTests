@@ -3,7 +3,7 @@ var should = require('should');
 var common = require('../../common.webdriverio');
 var globals = require('../../globals.webdriverio.js');
 
-describe('The Check of the order in Back Office', function(){
+describe('The Check of email send', function(){
 	common.initMocha.call(this);
 	
 	before(function(done){
@@ -32,6 +32,7 @@ describe('The Check of the order in Back Office', function(){
                 .waitForExist('//*[@id="mail_fieldset_test"]/div[4]/button', 90000)
                 .click('//*[@id="mail_fieldset_test"]/div[4]/button')
                 .waitForExist('//*[@id="mailResultCheck"]',10000)
+                .pause(3000)
                 .call(done);
 	    });
 
@@ -39,12 +40,12 @@ describe('The Check of the order in Back Office', function(){
             global.fctname= this.test.title;
 		    this.client
                 .pause(3000)
-                .waitForExist('//*[@id="PS_MAIL_METHOD_2"]',10000)
-		        .click('//*[@id="PS_MAIL_METHOD_2"]')
+                .waitForExist('//*[@id="conf_id_PS_MAIL_METHOD"]/div/p[2]/label',10000)
+		        .click('//*[@id="conf_id_PS_MAIL_METHOD"]/div/p[2]/label')
 		        .pause(3000)
 
 		        .waitForExist('//*[@id="conf_id_PS_MAIL_SERVER"]/div/input', 90000)
-		        .setValue('//*[@id="conf_id_PS_MAIL_SERVER"]/div/input', 'localhost')
+		        .setValue('//*[@id="conf_id_PS_MAIL_SERVER"]/div/input', '0.0.0.0')
 		        .pause(2000)
 
 		        .waitForExist('//*[@id="conf_id_PS_MAIL_USER"]/div/input', 90000)
@@ -64,14 +65,18 @@ describe('The Check of the order in Back Office', function(){
 		        .pause(4000)
 
                 .click('//*[@id="mail_fieldset_test"]/div[4]/button')
+                .waitForExist('//*[@id="mailResultCheck"]', 90000)
+                .getText('//*[@id="mailResultCheck"]').then(function(text) {
+					var my_text_check = text;
+					should(my_text_check).be.equal('A test email has been sent to the email address you provided.');
+				})
 		        .pause(4000)
-
                 .call(done);
 	    });
 
 	});
 
-    describe('verify Send email test', function(done){
+ /*   describe('verify Send email test', function(done){
 
         it('should go to mailDev Parameters', function(done){
             global.fctname= this.test.title;
@@ -88,7 +93,7 @@ describe('The Check of the order in Back Office', function(){
                 .call(done);
 	    });
 
-	});
+	});*/
 	
 	describe('Log out in Back Office', function(done){
         it('should log out successfully in BO', function(done){
