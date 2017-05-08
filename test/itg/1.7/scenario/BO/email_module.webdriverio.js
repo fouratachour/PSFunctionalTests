@@ -43,7 +43,7 @@ describe('The Check of email send', function(){
 		        .pause(3000)
 
 		        .waitForExist('//*[@id="conf_id_PS_MAIL_SERVER"]/div/input', 90000)
-		        .setValue('//*[@id="conf_id_PS_MAIL_SERVER"]/div/input', 'localhost')
+		        .setValue('//*[@id="conf_id_PS_MAIL_SERVER"]/div/input', '0.0.0.0')
 		        .pause(2000)
 
 		        .waitForExist('//*[@id="conf_id_PS_MAIL_USER"]/div/input', 90000)
