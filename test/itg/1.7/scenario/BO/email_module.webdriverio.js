@@ -57,7 +57,7 @@ describe('The Check of the order in Back Office', function(){
 
 
                 .waitForExist('//*[@id="conf_id_PS_MAIL_SMTP_PORT"]/div/input', 90000)
-		        .setValue('//*[@id="conf_id_PS_MAIL_SMTP_PORT"]/div/input', '1025')
+		        .setValue('//*[@id="conf_id_PS_MAIL_SMTP_PORT"]/div/input', '25')
 		        .pause(2000)
 
 		        .click('//*[@id="mail_fieldset_smtp"]/div[3]/button')
