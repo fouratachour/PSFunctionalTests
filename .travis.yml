@@ -38,6 +38,7 @@ before_script:
   - npm install
   - docker run -p 1080:80 -p 1025:25 --link prestashop --name maildev djfarrelly/maildev &
   - sleep 10
+  - docker ps -a
   - npm install selenium-standalone@latest
   - cd node_modules/selenium-standalone/bin/
   - ./selenium-standalone install
