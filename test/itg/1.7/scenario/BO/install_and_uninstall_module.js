@@ -12,7 +12,6 @@ var only_filename = __filename.slice(__dirname.length + 1, -3);
 
 describe('The Install of a Module and its Uninstall', function(){
 
-
 	common.initMocha.call(this);
 
 	before(function(done){
