@@ -37,7 +37,7 @@ describe('The Purchase of a product', function(){
 				.click(this.selector.logo_home_pageFO)
 				.waitForExist(this.selector.first_product_home_page, 90000)
                 .click(this.selector.first_product_home_page)
-				.getText('//*[@id="main"]/div[1]/div[2]/h1').then(function(text) {
+				.getText(this.selector.product_name_details).then(function(text) {
 					global.my_name = text;
 				})
 				.waitForExist(this.selector.product_image, 90000)
@@ -49,7 +49,7 @@ describe('The Purchase of a product', function(){
 				.getText(this.selector.product_price_details).then(function(text) {
 					global.my_price = text;
 				})
-                .getAttribute('//*[@id="content"]/div[1]/div[2]/ul/li[1]/img', "alt").then(function(text) {
+                .getAttribute(this.selector.thumbnail_image, "alt").then(function(text) {
 					 var alt = text.toLowerCase();
 					 var texttoverify = global.my_name.toLowerCase()+global.my_price;
 					 should(alt).be.equal(texttoverify);

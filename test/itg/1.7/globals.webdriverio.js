@@ -107,8 +107,8 @@ module.exports = {
         all_catalog_btn_rules:'//*[@id="radios-0"]/label/input',
         rules_condition:'//*[@id="legend"]',
         save_rules:'//*[@id="btn-save"]',
-
-
+        edit_btn_rules_step1='//*[@id="table-metas-1"]/tbody/tr[1]/td[7]/div/div/button',
+        edit_btn_rules_step2='//*[@id="table-metas-1"]/tbody/tr[1]/td[7]/div/div/ul/li[1]/a'
 	//FO
 		access_loginFO:'div.user-info > a',
 		loginFO: '//*[@id="login-form"]/section/div[1]/div[1]/input',
@@ -161,7 +161,7 @@ module.exports = {
 		search_product_result_name: '//*[@id="js-product-list"]/div[1]/article[1]/div/div[1]/h1/a',
 		search_product_result_price: '[itemprop="price"]',
 		close_error:'//*[@id="error-modal"]/div/div/button',
-
+		thumbnail_image:'//*[@id="content"]/div[1]/div[2]/ul/li[1]/img',
 	},
     shouldExist: function(err, existing) {
         should(err).be.not.defined;

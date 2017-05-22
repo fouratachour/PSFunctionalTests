@@ -23,8 +23,8 @@ describe('Allscenario', function(){
 
 
 	//create a rule FR in BO and check it in FO
-	require('./scenario/BO/add_rules_FR.webdriverio');
-	require('./scenario/FO/verify_rules.webdriverio');
-
+	//require('./scenario/BO/add_rules_FR.webdriverio');
+	//require('./scenario/FO/verify_rules.webdriverio');
+    require('./scenario/BO/edit_rules_FR.webdriverio');
 
 });
