@@ -97,6 +97,17 @@ module.exports = {
 		modules_installed: '(//div[@class="page-head-tabs"]/a)[2]',
 		modules_validate_uninstall: '//a[@class="btn btn-primary uppercase module_action_modal_uninstall"]',
 		close_sf_toolbar:'//a[@class="hide-button"]',
+        module_seo_configuration:'//*[@id="modules-list-container-all"]/div/div/div/div[5]/div[2]/form/button',
+        seo_config_panel:'//*[@id="modulecontent"]/div[1]/div[1]/a[2]',
+        add_rules_btn:'//*[@id="table-metas-1"]/a[2]',
+        rule_name:'//*[@id="rule_name"]',
+        rule_lang_btn:'//*[@id="step-1"]/div[3]/div/div[1]/button',
+        rule_lang_btn_FR:'//*[@id="step-1"]/div[3]/div/div[1]/div/ul/li[1]',
+        next_step_rules:'//*[@id="next-step"]',
+        all_catalog_btn_rules:'//*[@id="radios-0"]/label/input',
+        rules_condition:'//*[@id="legend"]',
+        save_rules:'//*[@id="btn-save"]',
+
 
 	//FO
 		access_loginFO:'div.user-info > a',
