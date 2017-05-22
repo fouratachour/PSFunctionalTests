@@ -94,10 +94,6 @@ describe('The Check of the order in Back Office', function(){
                 .waitForExist(this.selector.save_rules, 90000)
                 .click(this.selector.save_rules)
                 .pause(2000)
-                .getText('/html/body/div[6]/div/div/div[2]/div/div/button').then(function (text) {
-                     var my_name = text;
-                     should(my_name).be.equal('X');
-                })
                 .call(done);
         });
 

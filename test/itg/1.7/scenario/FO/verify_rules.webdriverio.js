@@ -36,30 +36,26 @@ describe('The Purchase of a product', function(){
 			    .waitForExist(this.selector.logo_home_pageFO, 90000)
 				.click(this.selector.logo_home_pageFO)
 				.waitForExist(this.selector.first_product_home_page, 90000)
-				.getText(this.selector.first_product_home_page_name).then(function(text) {
-					global.my_name = text[1].split('...')[0];
-					console.log('le nom et'+global.my_name);
+                .click(this.selector.first_product_home_page)
+				.getText('//*[@id="main"]/div[1]/div[2]/h1').then(function(text) {
+					global.my_name = text;
 				})
-				.click(this.selector.first_product_home_page)
 				.waitForExist(this.selector.product_image, 90000)
 				.pause(2000)
 				.getText(this.selector.product_name_details).then(function(text) {
 					var my_name_check = text;
-					my_name_check.toLowerCase().should.containEql(my_name.toLowerCase());
+					my_name_check.should.containEql(my_name);
 				})
 				.getText(this.selector.product_price_details).then(function(text) {
 					global.my_price = text;
-					console.log('price is'+ global.my_price);
 				})
                 .getAttribute('//*[@id="content"]/div[1]/div[2]/ul/li[1]/img', "alt").then(function(text) {
-					 var alt = text;
-					 should(alt).be.equal(global.my_name + global.my_price);
+					 var alt = text.toLowerCase();
+					 var texttoverify = global.my_name.toLowerCase()+global.my_price;
+					 should(alt).be.equal(texttoverify);
                 })
-
 			    .call(done);
 		});
-
-
 
 	});
 
