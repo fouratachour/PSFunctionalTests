@@ -103,12 +103,16 @@ module.exports = {
         rule_name:'//*[@id="rule_name"]',
         rule_lang_btn:'//*[@id="step-1"]/div[3]/div/div[1]/button',
         rule_lang_btn_FR:'//*[@id="step-1"]/div[3]/div/div[1]/div/ul/li[1]',
+        rule_lang_btn_EN:'//*[@id="step-1"]/div[3]/div/div[1]/div/ul/li[2]',
         next_step_rules:'//*[@id="next-step"]',
         all_catalog_btn_rules:'//*[@id="radios-0"]/label/input',
+        specific_catalog_btn_rules:'//*[@id="radios-1"]/label/input',
         rules_condition:'//*[@id="legend"]',
         save_rules:'//*[@id="btn-save"]',
-        edit_btn_rules_step1='//*[@id="table-metas-1"]/tbody/tr[1]/td[7]/div/div/button',
-        edit_btn_rules_step2='//*[@id="table-metas-1"]/tbody/tr[1]/td[7]/div/div/ul/li[1]/a'
+        edit_btn_rules_step1:'//*[@id="table-metas-1"]/tbody/tr[1]/td[7]/div/div/button',
+        edit_btn_rules_step2:'//*[@id="table-metas-1"]/tbody/tr[1]/td[7]/div/div/ul/li[1]/a',
+        modal_close_btn:'/html/body/div[6]/div/div/div[1]/div/div[2]/button',
+        rules_apply:'//*[@id="table-metas-1"]/tbody/tr/td[7]/div/div/a',
 	//FO
 		access_loginFO:'div.user-info > a',
 		loginFO: '//*[@id="login-form"]/section/div[1]/div[1]/input',
@@ -162,7 +166,18 @@ module.exports = {
 		search_product_result_price: '[itemprop="price"]',
 		close_error:'//*[@id="error-modal"]/div/div/button',
 		thumbnail_image:'//*[@id="content"]/div[1]/div[2]/ul/li[1]/img',
-	},
+		reference_product:'//*[@id="product-details"]/div[2]/span',
+		detail_product:'//*[@id="main"]/div[1]/div[2]/div[2]/div[4]/ul/li[2]/a',
+		expand_all_categorie:'//*[@id="expandall"]',
+		evening_dress_cat:'//*[@id="category_10"]/a/i[1]',
+		language_btn:'//*[@id="_desktop_language_selector"]/div/div/span',
+		english_language:'//*[@id="_desktop_language_selector"]/div/div/ul/li[2]',
+		all_product:'//*[@id="content"]/section/a',
+		first_category_level:'//*[@id="left-column"]/div[1]/ul/li[2]/ul/li/div[1]/i[1]',
+		secand_category_level:'//*[@id="exCollapsingNavbar3"]/ul/li[2]/a',
+		third_category_level:'//*[@id="left-column"]/div[1]/ul/li[2]/ul/li[2]/a',
+		choose_category_product:'//*[@id="js-product-list"]/div[1]/article/div/a',
+},
     shouldExist: function(err, existing) {
         should(err).be.not.defined;
         should(existing).be.true;

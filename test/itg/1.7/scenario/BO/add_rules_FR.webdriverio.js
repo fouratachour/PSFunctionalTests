@@ -3,7 +3,7 @@ var should = require('should');
 var common = require('../../common.webdriverio');
 var globals = require('../../globals.webdriverio.js');
 
-describe('The Check of the order in Back Office', function(){
+describe('Check of rule ', function(){
 	common.initMocha.call(this);
 
 	before(function(done){
@@ -101,7 +101,7 @@ describe('The Check of the order in Back Office', function(){
             global.fctname= this.test.title;
             this.client
                 .pause(2000)
-                .click('/html/body/div[6]/div/div/div[1]/div/div[2]/button')
+                .click(this.selector.modal_close_btn)
                 .call(done);
         });
 
@@ -109,8 +109,8 @@ describe('The Check of the order in Back Office', function(){
             global.fctname= this.test.title;
             this.client
                 .pause(5000)
-                .waitForExist('//*[@id="table-metas-1"]/tbody/tr/td[7]/div/div/a', 90000)
-                .click('//*[@id="table-metas-1"]/tbody/tr/td[7]/div/div/a')
+                .waitForExist(this.selector.rules_apply, 90000)
+                .click(this.selector.rules_apply)
                 .pause(5000)
                 .call(done);
         });

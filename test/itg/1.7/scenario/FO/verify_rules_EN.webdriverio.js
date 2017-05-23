@@ -14,19 +14,22 @@ describe('The Purchase of a product', function(){
     process.on('ReferenceError', common.take_screenshot);
 	after(common.after);
 
-		it('Open the shop and loggin FO', function(done){
+		it('Open the shop and loggin FO - EN', function(done){
 		    global.fctname= this.test.title;
 			this.client
                 .url('http://' + URL)
-                .waitForExist(this.selector.access_loginFO, 90000)
                 .click(this.selector.access_loginFO)
                 .waitForExist(this.selector.loginFO, 90000)
                 .setValue(this.selector.loginFO, 'pub@prestashop.com')
                 .setValue(this.selector.passwordFO, '123456789')
                 .click(this.selector.login_btnFO)
-                .pause(3000)
-                .call(done);
 
+                // change the language
+                .waitForExist(this.selector.language_btn, 90000)
+                .click(this.selector.language_btn)
+                .pause(3000)
+                .click(this.selector.english_language)
+                .call(done);
 		});
 
 	describe('verify the rule', function(done){
@@ -35,26 +38,46 @@ describe('The Purchase of a product', function(){
 			this.client
 			    .waitForExist(this.selector.logo_home_pageFO, 90000)
 				.click(this.selector.logo_home_pageFO)
-				.waitForExist(this.selector.first_product_home_page, 90000)
-                .click(this.selector.first_product_home_page)
+
+                .waitForExist(this.selector.all_product, 90000)
+                .click(this.selector.all_product)
+                .pause(2000)
+
+                .waitForExist(this.selector.first_category_level, 90000)
+                .click(this.selector.first_category_level)
+                .pause(2000)
+
+                .waitForExist(this.selector.secand_category_level, 90000)
+                .click(this.selector.secand_category_level)
+                .pause(2000)
+
+                .waitForExist(this.selector.third_category_level, 90000)
+                .click(this.selector.third_category_level)
+                .pause(2000)
+
+                .waitForExist(this.selector.choose_category_product, 90000)
+                .click(this.selector.choose_category_product)
+
+
 				.getText(this.selector.product_name_details).then(function(text) {
 					global.my_name = text;
 				})
+
 				.waitForExist(this.selector.product_image, 90000)
 				.pause(2000)
+
 				.getText(this.selector.product_name_details).then(function(text) {
 					var my_name_check = text;
 					my_name_check.should.containEql(my_name);
 				})
-				.getText(this.selector.product_price_details).then(function(text) {
-					global.my_price = text;
-				})
+
                 .getAttribute(this.selector.thumbnail_image, "alt").then(function(text) {
 					 var alt = text.toLowerCase();
-					 var texttoverify = global.my_name.toLowerCase()+global.my_price;
-					 should(alt).be.equal(texttoverify);
+					 var texttoverify = global.my_name.toLowerCase();
+					 should(alt).be.equal('product name : ' + texttoverify.toLowerCase());
                 })
 			    .call(done);
+
 		});
 
 	});
@@ -68,7 +91,6 @@ describe('The Purchase of a product', function(){
                 .click(this.selector.logoutFO)
                 .waitForExist(this.selector.access_loginFO, 90000)
                 .call(done);
-
 		});
 	});
 

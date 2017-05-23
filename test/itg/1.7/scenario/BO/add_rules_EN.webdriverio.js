@@ -3,7 +3,7 @@ var should = require('should');
 var common = require('../../common.webdriverio');
 var globals = require('../../globals.webdriverio.js');
 
-describe('Check of edited rule', function(){
+describe('Check of rule EN', function(){
 	common.initMocha.call(this);
 
 	before(function(done){
@@ -24,7 +24,7 @@ describe('Check of edited rule', function(){
 		});
 	});
 
-	describe('Add rule FR', function(done){
+	describe('Add rule EN', function(done){
         it('should go to the modules page', function(done){
             global.fctname= this.test.title;
             this.client
@@ -52,29 +52,57 @@ describe('Check of edited rule', function(){
                 .call(done);
         });
 
-        it('should editing the rule - langue FR ', function(done){
+        it('Add rules Name - langue EN ', function(done){
 	        global.fctname= this.test.title;
             this.client
                 .waitForExist(this.selector.seo_config_panel, 90000)
                 .click(this.selector.seo_config_panel)
 
-                .waitForExist(this.selector.edit_btn_rules_step1, 90000)
-                .click(this.selector.edit_btn_rules_step1)
+                .pause(2000)
+                .waitForExist(this.selector.add_rules_btn, 90000)
+                .click(this.selector.add_rules_btn)
 
-                .waitForExist(this.selector.edit_btn_rules_step2, 90000)
-                .click(this.selector.edit_btn_rules_step2)
+                .waitForExist(this.selector.rule_name,60000)
+				.setValue(this.selector.rule_name,'Rule EN')
+
+                .waitForExist(this.selector.rule_lang_btn, 90000)
+                .click(this.selector.rule_lang_btn)
+                .click(this.selector.rule_lang_btn_EN)
 
                 .waitForExist(this.selector.next_step_rules, 90000)
                 .click(this.selector.next_step_rules)
 
+                .call(done);
+        });
+
+        it('Add rules categorie ', function(done){
+            global.fctname= this.test.title;
+            this.client
+                .pause(5000)
+                // select specific categorie
+                .click(this.selector.specific_catalog_btn_rules)
+
+                // afficher tous les categorie
+                .waitForExist(this.selector.expand_all_categorie, 90000)
+                .click(this.selector.expand_all_categorie)
+
+                // choose category
+                .waitForExist(this.selector.evening_dress_cat, 90000)
+                .click(this.selector.evening_dress_cat)
+
                 .waitForExist(this.selector.next_step_rules, 90000)
                 .click(this.selector.next_step_rules)
 
-                 // edit Modéle
+            .call(done)
+        });
+
+        it('Add rules conditions ', function(done){
+            global.fctname= this.test.title;
+            this.client
                 .waitForExist(this.selector.rules_condition, 90000)
                 .leftClick(this.selector.rules_condition)
-                .pause(2000)
-                .setValue(this.selector.rules_condition,'Référence : {product_reference}')
+                .pause(5000)
+                .setValue(this.selector.rules_condition,'Product name : {product_name}')
                 .waitForExist(this.selector.save_rules, 90000)
                 .click(this.selector.save_rules)
                 .pause(2000)
@@ -93,8 +121,8 @@ describe('Check of edited rule', function(){
             global.fctname= this.test.title;
             this.client
                 .pause(5000)
-                .waitForExist(this.selector.rules_apply, 90000)
-                .click(this.selector.rules_apply)
+                .waitForExist('//*[@id="table-metas-1"]/tbody/tr[2]/td[7]/div/div/a', 90000)
+                .click('//*[@id="table-metas-1"]/tbody/tr[2]/td[7]/div/div/a')
                 .pause(5000)
                 .call(done);
         });
