@@ -23,7 +23,7 @@ describe('Allscenario', function(){
 
 
 	//create a rule FR in BO and check it in FO
-/*        require('./scenario/BO/add_rules_FR.webdriverio');
+       require('./scenario/BO/add_rules_FR.webdriverio');
         require('./scenario/FO/verify_rules_FR.webdriverio');
 
         require('./scenario/BO/edit_rules_FR.webdriverio');
@@ -32,7 +32,7 @@ describe('Allscenario', function(){
         require('./scenario/BO/add_rules_EN.webdriverio');
         require('./scenario/FO/verify_rules_EN.webdriverio');
 
-        require('./scenario/BO/add_apply_multi_rules_EN.webdriverio');*/
+        require('./scenario/BO/add_apply_multi_rules_EN.webdriverio');
         require('./scenario/FO/verify_rules_list_EN.webdriverio');
 
 });

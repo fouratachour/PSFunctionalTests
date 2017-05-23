@@ -2,17 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0d3a0ec7-459e-4954-8917-ffd9985fefd5" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/itg/1.7/scenario/BO/add_apply_multi_rules_EN.webdriverio.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/itg/1.7/scenario/BO/add_rules_EN.webdriverio.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/itg/1.7/scenario/FO/verify_edited_rule_FR.webdriverio.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/itg/1.7/scenario/FO/verify_rules_FR.webdriverio.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/itg/1.7/scenario/FO/verify_rules_list_EN.webdriverio.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/test/itg/1.7/scenario/FO/verify_rules.webdriverio.js" afterPath="$PROJECT_DIR$/test/itg/1.7/scenario/FO/verify_rules_EN.webdriverio.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/itg/1.7/globals.webdriverio.js" afterPath="$PROJECT_DIR$/test/itg/1.7/globals.webdriverio.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/itg/1.7/index.webdriverio.js" afterPath="$PROJECT_DIR$/test/itg/1.7/index.webdriverio.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/itg/1.7/scenario/BO/add_rules_FR.webdriverio.js" afterPath="$PROJECT_DIR$/test/itg/1.7/scenario/BO/add_rules_FR.webdriverio.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/itg/1.7/scenario/BO/edit_rules_FR.webdriverio.js" afterPath="$PROJECT_DIR$/test/itg/1.7/scenario/BO/edit_rules_FR.webdriverio.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -24,21 +14,31 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.webdriverio.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.webdriverio.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/itg/1.7/index.webdriverio.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="388">
-              <caret line="33" column="0" lean-forward="true" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+            <state relative-caret-position="406">
+              <caret line="34" column="70" lean-forward="true" selection-start-line="34" selection-start-column="70" selection-end-line="34" selection-end-column="70" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="verify_rules_list_EN.webdriverio.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="verify_rules_list_EN.webdriverio.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/itg/1.7/scenario/FO/verify_rules_list_EN.webdriverio.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="351">
               <caret line="71" column="41" lean-forward="true" selection-start-line="71" selection-start-column="41" selection-end-line="71" selection-end-column="41" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".travis.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.travis.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="593">
+              <caret line="47" column="12" lean-forward="false" selection-start-line="47" selection-start-column="12" selection-end-line="47" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -163,8 +163,8 @@
         <option value="$PROJECT_DIR$/test/itg/1.7/scenario/FO/verify_rules_FR.webdriverio.js" />
         <option value="$PROJECT_DIR$/test/itg/1.7/scenario/BO/add_rules_EN.webdriverio.js" />
         <option value="$PROJECT_DIR$/test/itg/1.7/scenario/BO/add_apply_multi_rules_EN.webdriverio.js" />
-        <option value="$PROJECT_DIR$/test/itg/1.7/index.webdriverio.js" />
         <option value="$PROJECT_DIR$/test/itg/1.7/scenario/FO/verify_rules_list_EN.webdriverio.js" />
+        <option value="$PROJECT_DIR$/test/itg/1.7/index.webdriverio.js" />
       </list>
     </option>
   </component>
@@ -673,13 +673,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.travis.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="485">
-          <caret line="47" column="12" lean-forward="false" selection-start-line="47" selection-start-column="12" selection-end-line="47" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/itg/1.7/screenshots/chrome-Exception_should go to the product details.png" />
     <entry file="file://$PROJECT_DIR$/test/itg/1.7/common.webdriverio.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -761,18 +754,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/itg/1.7/index.webdriverio.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="388">
-          <caret line="33" column="0" lean-forward="true" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/itg/1.7/scenario/FO/verify_rules_list_EN.webdriverio.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="351">
           <caret line="71" column="41" lean-forward="true" selection-start-line="71" selection-start-column="41" selection-end-line="71" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.travis.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="593">
+          <caret line="47" column="12" lean-forward="false" selection-start-line="47" selection-start-column="12" selection-end-line="47" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/itg/1.7/index.webdriverio.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="406">
+          <caret line="34" column="70" lean-forward="true" selection-start-line="34" selection-start-column="70" selection-end-line="34" selection-end-column="70" />
           <folding />
         </state>
       </provider>
