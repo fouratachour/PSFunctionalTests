@@ -2,4 +2,5 @@ node_modules/*
 .DS_Store
 geckodriver
 selenium-server-standalone-3.3.1.jar
-.idea/workspace.xml
+.idea/*
+ test/itg/1.7/mochawesome-report/*

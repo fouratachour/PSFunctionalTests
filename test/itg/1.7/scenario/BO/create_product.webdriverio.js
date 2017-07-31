@@ -196,7 +196,7 @@ describe('The Product Creation', function(){
 		});
 
 		it('Should generate picture url', function(done){
-			global.picture_url = "/img/p";
+			picture_url = "/img/p";
 			for (var i = 0, len = image_data_id.length; i < len; i++) {
 				picture_url= picture_url + "/" + image_data_id[i];
 			}
