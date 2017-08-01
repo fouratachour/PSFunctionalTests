@@ -21,7 +21,7 @@ var options2 = {
 		'tunnel-identifier': process.env.TRAVIS_JOB_NUMBER,
 		username: process.env.SAUCE_USERNAME,
 		access_key: process.env.SAUCE_ACCESS_KEY,
-		screenResolution: "1680x1050",
+		//screenResolution: "1680x1050",
 		platform: "Windows 7"
 	},
 	port: 4445
