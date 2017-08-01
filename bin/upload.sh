@@ -3,6 +3,8 @@
 FIXED_BRANCH=$(echo $TRAVIS_BRANCH | sed 's/\//-/g')
 ARCHIVE=$FIXED_BRANCH-$(date +%Y-%m-%d_%H_%M_%S)-$TRAVIS_COMMIT.tar
 echo "Creating archive $ARCHIVE"
+cd test/itg/$PS_VERSION/mochawesome-report/
+cd ../../..
 tar -cvf $ARCHIVE -C test/itg/$PS_VERSION/mochawesome-report/
 FILESIZE=$(stat -c%s "$ARCHIVE")
 echo "Finished archive (size $FILESIZE), starting Google Drive upload"
