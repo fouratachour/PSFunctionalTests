@@ -50,8 +50,18 @@
       <file leaf-file-name="upload.sh" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bin/upload.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="63" lean-forward="false" selection-start-line="3" selection-start-column="63" selection-end-line="3" selection-end-column="63" />
+            <state relative-caret-position="75">
+              <caret line="5" column="53" lean-forward="false" selection-start-line="5" selection-start-column="53" selection-end-line="5" selection-end-column="53" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="globals.webdriverio.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/itg/1.7/globals.webdriverio.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -449,12 +459,12 @@
       <workItem from="1501252879873" duration="5233000" />
       <workItem from="1501487900739" duration="3724000" />
       <workItem from="1501574633091" duration="4483000" />
-      <workItem from="1501581973955" duration="7556000" />
+      <workItem from="1501581973955" duration="8808000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53412000" />
+    <option name="totallyTimeSpent" value="54664000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="27" width="1922" height="1054" extended-state="6" />
@@ -741,13 +751,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/itg/1.7/globals.webdriverio.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/itg/1.6/index.webdriverio.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="117">
@@ -776,14 +779,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/itg/1.7/common.webdriverio.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="583">
-          <caret line="110" column="54" lean-forward="false" selection-start-line="110" selection-start-column="43" selection-end-line="110" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/itg/1.7/scenario/BO/check_order.webdriverio.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -800,6 +795,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/test/itg/1.7/globals.webdriverio.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/itg/1.7/common.webdriverio.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="583">
+          <caret line="110" column="54" lean-forward="false" selection-start-line="110" selection-start-column="43" selection-end-line="110" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/.travis.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="634">
@@ -810,8 +821,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bin/upload.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="63" lean-forward="false" selection-start-line="3" selection-start-column="63" selection-end-line="3" selection-end-column="63" />
+        <state relative-caret-position="75">
+          <caret line="5" column="53" lean-forward="false" selection-start-line="5" selection-start-column="53" selection-end-line="5" selection-end-column="53" />
           <folding />
         </state>
       </provider>
