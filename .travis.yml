@@ -54,6 +54,7 @@ script:
 
 after_script:
  - docker logs prestashop
+ - ls
  - cd ../../..
  - ls
  - chmod 777 bin/upload.sh
