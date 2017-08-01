@@ -8,6 +8,6 @@ zip -r zipfile.zip test/itg/$PS_VERSION/mochawesome-report
 
 tar -cjf zipfile.zip -C test/itg/$PS_VERSION/mochawesome-report .
 
-./bin/gdrive-linux-x64 upload --refresh-token $GDRIVE_REFRESH_TOKEN --parent $GDRIVE_DIR "reporter"
+./bin/gdrive-linux-x64 upload --refresh-token $GDRIVE_REFRESH_TOKEN --parent $GDRIVE_DIR "zipfile.zip"
 
 echo "Finished Google Drive upload"
