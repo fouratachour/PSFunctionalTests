@@ -54,7 +54,6 @@ describe('The Check of email send', function(){
 		        .setValue('//*[@id="conf_id_PS_MAIL_PASSWD"]/div/input', '123456789')
 		        .pause(2000)
 
-
                 .waitForExist('//*[@id="conf_id_PS_MAIL_SMTP_PORT"]/div/input', 90000)
 		        .setValue('//*[@id="conf_id_PS_MAIL_SMTP_PORT"]/div/input', '25')
 		        .pause(2000)
