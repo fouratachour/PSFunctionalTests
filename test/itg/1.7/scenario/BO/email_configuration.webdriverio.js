@@ -45,7 +45,7 @@ describe('Email SMTP configuration in Back Office', function () {
                 .waitForExist('//*[@id="conf_id_PS_MAIL_SERVER"]/div/input', 90000)
 
                // for travis config
-                 .setValue('//*[@id="conf_id_PS_MAIL_SERVER"]/div/input', '10.0.2.3')
+                .setValue('//*[@id="conf_id_PS_MAIL_SERVER"]/div/input', '10.0.2.3')
                // for local config
                  //.setValue('//*[@id="conf_id_PS_MAIL_SERVER"]/div/input', 'localhost')
 
@@ -57,7 +57,7 @@ describe('Email SMTP configuration in Back Office', function () {
                // travis config
                     .setValue('//*[@id="conf_id_PS_MAIL_SMTP_PORT"]/div/input', '25')
                //local config
-                    //.setValue('//*[@id="conf_id_PS_MAIL_SMTP_PORT"]/div/input', '1025')
+                  //  .setValue('//*[@id="conf_id_PS_MAIL_SMTP_PORT"]/div/input', '1025')
 
                 .click('//*[@id="mail_fieldset_smtp"]/div[3]/button')
                 .call(done);
@@ -93,11 +93,10 @@ describe('Email SMTP configuration in Back Office', function () {
                 .url('http://localhost:1080')
                 .waitForExist('/html/body/div/div[1]/div[2]/ul/li', 90000)
                 .click('/html/body/div/div[1]/div[2]/ul/li')
-                .pause(15000)
                 .getText('/html/body/div/div[2]/div[2]/div/div[1]').then(function(text) {
                 var my_text_check = text;
-                should(my_text_check).be.equal('This is a test message. Your server is now configured to send email.');
-            })
+                 should(my_text_check).be.equal('This is a test message. Your server is now configured to send email.');
+                 })
                 .call(done);
         });
     });

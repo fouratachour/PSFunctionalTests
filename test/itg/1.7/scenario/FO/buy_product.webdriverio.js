@@ -186,21 +186,21 @@ describe('The Purchase of a product', function () {
     });
 
     describe('Validation Email', function (done) {
-
-        it('should check the recived email ', function (done) {
+        it('should check the received email ', function (done) {
             global.fctname = this.test.title;
             this.client
                 .url('http://localhost:1080')
                 .waitForExist('/html/body/div/div[1]/div[2]/ul/li[1]/a/span[1]', 90000)
                 .getText('/html/body/div/div[1]/div[2]/ul/li[1]/a/span[1]').then(function(text) {
-                     global.mail_title = text.indexOf('Confirmation de commande');
-                    console.log(global.mail_title)
+                    global.mailTitle = text.indexOf('Confirmation de commande');
+                    console.log(global.mailTitle)
+                    if(global.mailTitle == -1){
+                        done(new Error("Failed to send e-mail"));
+                    }else{
+                        done();
+                    }
                 });
-                if(global.mail_title == -1){
-                    done(new Error("Failed to send e-mail"));
-                }else{
-                    done();
-                }
+
         });
 
     });
