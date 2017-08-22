@@ -3,7 +3,7 @@ var should = require('should');
 var common = require('../../common.webdriverio');
 var globals = require('../../globals.webdriverio.js');
 
-describe('The Check of the order in Back Office', function () {
+describe('Email SMTP configuration in Back Office', function () {
     common.initMocha.call(this);
 
     before(function (done) {
