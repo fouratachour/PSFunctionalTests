@@ -107,7 +107,14 @@ module.exports = {
         onboarding_popup_close_btn: '.onboarding-button-shut-down',
         onboarding_stop: '.onboarding-button-stop',
 
-        //
+        //advanced parameter page
+        EmailConfig:{
+            advanced_parameter_button:'//*[@id="subtab-AdminAdvancedParameters"]/a',
+            email_setting_button:'//*[@id="subtab-AdminEmails"]/a',
+            email_seeting_menu:'//*[@id="mailResultCheck"]',
+
+
+        },
 
         //FO
         access_loginFO: 'div.user-info > a',

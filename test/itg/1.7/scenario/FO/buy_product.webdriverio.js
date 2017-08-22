@@ -192,9 +192,7 @@ describe('The Purchase of a product', function () {
                 .url('http://localhost:1080')
                 .waitForExist('/html/body/div/div[1]/div[2]/ul/li[1]/a/span[1]', 90000)
                 .getText('/html/body/div/div[1]/div[2]/ul/li[1]/a/span[1]').then(function(text) {
-                    console.log(text)
                     global.mailTitle = text.indexOf('Order confirmation');
-                    console.log(global.mailTitle)
                     if(global.mailTitle == -1){
                         done(new Error("Failed to send e-mail"));
                     }else{

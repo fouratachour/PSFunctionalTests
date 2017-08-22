@@ -88,9 +88,7 @@ describe('The Creation of an Account in Front Office', function () {
                 .click('/html/body/div/div[1]/div[2]/ul/li[1]')
                 .waitForExist('/html/body/div/div[1]/div[2]/ul/li[1]/a/span[1]', 3000)
                 .getText('/html/body/div/div[1]/div[2]/ul/li[1]/a/span[1]').then(function(text) {
-                console.log(text)
-                    global.maildesciption = text.indexOf('Bienvenue');
-                    console.log(global.maildesciption+"testttt");
+                    global.maildesciption = text.indexOf('Welcome');
                     if(global.maildesciption == -1){
                         done(new Error("Failed to send e-mail"));
                     }else{

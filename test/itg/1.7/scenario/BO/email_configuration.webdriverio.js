@@ -29,9 +29,9 @@ describe('Email SMTP configuration in Back Office', function () {
         it('should go to Advanced Parameters', function(done){
             global.fctname= this.test.title;
             this.client
-                .moveToObject('//*[@id="subtab-AdminAdvancedParameters"]/a')
-                .click('//*[@id="subtab-AdminEmails"]/a')
-                .waitForExist('//*[@id="mailResultCheck"]',10000)
+                .moveToObject(this.selector.EmailConfig.advanced_parameter_button)
+                .click(this.selector.EmailConfig.email_setting_button)
+                .waitForExist(this.selector.EmailConfig.email_seeting_menu,10000)
                 .pause(3000)
                 .call(done);
         });
