@@ -71,8 +71,8 @@ describe('Email SMTP configuration in Back Office', function () {
             global.fctname= this.test.title;
             this.client
                 .url('http://localhost:1080')
-                .waitForExist('/html/body/div/div[1]/div[2]/ul/li[1]', 90000)
-                .click('/html/body/div/div[1]/div[2]/ul/li[1]')
+                .waitForExist('/html/body/div/div[1]/div[2]/ul/li', 90000)
+                .click('/html/body/div/div[1]/div[2]/ul/li')
                 .pause(2000)
                 .getText('/html/body/div/div[2]/div[2]/div/div[1]').then(function(text) {
                 var my_text_check = text;
