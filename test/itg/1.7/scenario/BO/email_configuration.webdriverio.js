@@ -45,10 +45,9 @@ describe('Email SMTP configuration in Back Office', function () {
                 .waitForExist('//*[@id="conf_id_PS_MAIL_SERVER"]/div/input', 90000)
 
                // for travis config
-                // .setValue('//*[@id="conf_id_PS_MAIL_SERVER"]/div/input', '10.0.2.3')
-
+                 .setValue('//*[@id="conf_id_PS_MAIL_SERVER"]/div/input', '10.0.2.3')
                // for local config
-                 .setValue('//*[@id="conf_id_PS_MAIL_SERVER"]/div/input', 'localhost')
+                 //.setValue('//*[@id="conf_id_PS_MAIL_SERVER"]/div/input', 'localhost')
 
                 .waitForExist('//*[@id="conf_id_PS_MAIL_USER"]/div/input', 90000)
                 .setValue('//*[@id="conf_id_PS_MAIL_USER"]/div/input', 'demo@presta.com')
@@ -56,9 +55,9 @@ describe('Email SMTP configuration in Back Office', function () {
                 .setValue('//*[@id="conf_id_PS_MAIL_PASSWD"]/div/input', '123456789')
                 .waitForExist('//*[@id="conf_id_PS_MAIL_SMTP_PORT"]/div/input', 90000)
                // travis config
-                    //.setValue('//*[@id="conf_id_PS_MAIL_SMTP_PORT"]/div/input', '25')
+                    .setValue('//*[@id="conf_id_PS_MAIL_SMTP_PORT"]/div/input', '25')
                //local config
-                .setValue('//*[@id="conf_id_PS_MAIL_SMTP_PORT"]/div/input', '1025')
+                    //.setValue('//*[@id="conf_id_PS_MAIL_SMTP_PORT"]/div/input', '1025')
 
                 .click('//*[@id="mail_fieldset_smtp"]/div[3]/button')
                 .call(done);
