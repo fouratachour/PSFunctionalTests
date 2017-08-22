@@ -77,6 +77,27 @@ describe('The Creation of an Account in Front Office', function () {
                 .signoutFO()
                 .call(done);
         });
+
+        it('should check customer sign in recived email ', function (done) {
+            global.fctname = this.test.title;
+            this.client
+                .url('http://localhost:1080')
+                .waitForExist('/html/body/div/div[1]/div[2]/ul/li[1]', 90000)
+                .click('/html/body/div/div[1]/div[2]/ul/li[1]')
+                .waitForExist('/html/body/table/tbody/tr/td[2]/table/tbody/tr[2]/td/font/span[1]', 90000)
+            .getText('/html/body/table/tbody/tr/td[2]/table/tbody/tr[2]/td/font/span[1]').then(function(text) {
+                global.mailTitle = text.indexOf('Bonjour my firstname my lastname,');
+                console.log(global.mailTitle+"testttt")
+            });
+            if(global.mail_title == -1){
+                done(new Error("Failed to send e-mail"));
+            }else{
+                done();
+            }
+        });
     });
+
+
+
 
 });
