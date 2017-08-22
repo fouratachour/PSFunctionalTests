@@ -43,12 +43,10 @@ describe('Email SMTP configuration in Back Office', function () {
                 .click('//*[@id="conf_id_PS_MAIL_METHOD"]/div/p[2]/label')
                 .pause(2000)
                 .waitForExist('//*[@id="conf_id_PS_MAIL_SERVER"]/div/input', 90000)
-
                // for travis config
                 .setValue('//*[@id="conf_id_PS_MAIL_SERVER"]/div/input', '10.0.2.3')
                // for local config
                  //.setValue('//*[@id="conf_id_PS_MAIL_SERVER"]/div/input', 'localhost')
-
                 .waitForExist('//*[@id="conf_id_PS_MAIL_USER"]/div/input', 90000)
                 .setValue('//*[@id="conf_id_PS_MAIL_USER"]/div/input', 'demo@presta.com')
                 .waitForExist('//*[@id="conf_id_PS_MAIL_PASSWD"]/div/input', 90000)
