@@ -25,7 +25,6 @@ describe('The Purchase of a product', function () {
             .setValue(this.selector.passwordFO, '123456789')
             .click(this.selector.login_btnFO)
             .call(done);
-
     });
 
     describe('Add product to cart', function (done) {
@@ -35,34 +34,34 @@ describe('The Purchase of a product', function () {
                 .click(this.selector.logo_home_pageFO)
                 .waitForExist(this.selector.first_product_home_page, 90000)
                 .getText(this.selector.first_product_home_page_name).then(function (text) {
-                global.my_name = text[1].split('...')[0];
-            })
+                    global.my_name = text[1].split('...')[0];
+                })
                 .click(this.selector.first_product_home_page)
                 .waitForExist(this.selector.product_image, 90000)
                 .getText(this.selector.product_name_details).then(function (text) {
-                var my_name_check = text;
-                my_name_check.pop(-1).toLowerCase().should.containEql(my_name.toLowerCase());
-            })
+                    var my_name_check = text;
+                    my_name_check.pop(-1).toLowerCase().should.containEql(my_name.toLowerCase());
+                })
                 .getText(this.selector.product_price_details).then(function (text) {
-                global.my_price = text;
-            })
+                    global.my_price = text;
+                })
                 .getValue(this.selector.product_quantity_details).then(function (text) {
-                global.my_quantity = text;
-            })
+                    global.my_quantity = text;
+                })
                 .click(this.selector.add_to_cart)
                 .waitForExist(this.selector.layer_cart, 90000)
                 .getText(this.selector.layer_cart_name_details).then(function (text) {
-                var my_cart_name_check = text;
-                my_cart_name_check.toLowerCase().should.containEql(my_name.toLowerCase())
-            })
+                    var my_cart_name_check = text;
+                    my_cart_name_check.toLowerCase().should.containEql(my_name.toLowerCase())
+                })
                 .getText(this.selector.layer_cart_price_details).then(function (text) {
-                var my_cart_price_check = text;
-                should(my_cart_price_check).be.equal(my_price);
-            })
+                    var my_cart_price_check = text;
+                    should(my_cart_price_check).be.equal(my_price);
+                })
                 .getText(this.selector.layer_cart_quantity_details).then(function (text) {
-                var my_cart_quantity_check = text.split(': ');
-                should(my_cart_quantity_check[1]).be.equal(my_quantity);
-            })
+                    var my_cart_quantity_check = text.split(': ');
+                    should(my_cart_quantity_check[1]).be.equal(my_quantity);
+                })
                 .call(done);
         });
 
@@ -80,9 +79,9 @@ describe('The Purchase of a product', function () {
             this.client
                 .waitForExist(this.selector.command_button_checkout, 90000)
                 .getText(this.selector.command_product_name).then(function (text) {
-                var command_my_name = text;
-                command_my_name.toLowerCase().should.containEql(my_name.toLowerCase());
-            })
+                    var command_my_name = text;
+                    command_my_name.toLowerCase().should.containEql(my_name.toLowerCase());
+                })
                 .call(done);
         });
 
@@ -90,9 +89,9 @@ describe('The Purchase of a product', function () {
             global.fctname = this.test.title;
             this.client
                 .getText(this.selector.command_product_price).then(function (text) {
-                var command_price_check = text;
-                should(command_price_check).be.equal(my_price);
-            })
+                    var command_price_check = text;
+                    should(command_price_check).be.equal(my_price);
+                })
                 .call(done);
         });
         it('should click checkout button', function (done) {
@@ -117,9 +116,9 @@ describe('The Purchase of a product', function () {
             this.client
                 .waitForExist(this.selector.checkout_step4_payment, 90000)
                 .getText(this.selector.checkout_total).then(function (text) {
-                var checkout_total = text;
-                should(checkout_total).be.equal(my_price);
-            })
+                    var checkout_total = text;
+                    should(checkout_total).be.equal(my_price);
+                })
                 .click(this.selector.checkout_step4_payment)
                 .call(done);
         });
@@ -194,7 +193,7 @@ describe('The Purchase of a product', function () {
                 .getText(this.selector.EmailConfig.title_received_mail).then(function(text) {
                     global.mailTitle = text.indexOf('Order confirmation');
                     if(global.mailTitle == -1){
-                        done(new Error("Failed to send e-mail"));
+                        done(new Error("Failed to receive email"));
                     }else{
                         done();
                     }

@@ -43,19 +43,13 @@ describe('Email SMTP configuration in Back Office', function () {
                 .click(this.selector.EmailConfig.custum_SMTP_parameter_radio)
                 .pause(2000)
                 .waitForExist(this.selector.EmailConfig.SMTP_server_input, 90000)
-
-                .setValue(this.selector.EmailConfig.SMTP_server_input, '10.0.2.3')
-                //local config .setValue('//*[@id="conf_id_PS_MAIL_SERVER"]/div/input', 'localhost')
-
+                .setValue(this.selector.EmailConfig.SMTP_server_input, '10.0.2.3') //local config .setValue('//*[@id="conf_id_PS_MAIL_SERVER"]/div/input', 'localhost')
                 .waitForExist(this.selector.EmailConfig.SMTP_user_input, 90000)
                 .setValue(this.selector.EmailConfig.SMTP_user_input, 'demo@presta.com')
                 .waitForExist(this.selector.EmailConfig.SMTP_password_input, 90000)
                 .setValue(this.selector.EmailConfig.SMTP_password_input, '123456789')
                 .waitForExist(this.selector.EmailConfig.SMTP_port_input, 90000)
-
-                .setValue(this.selector.EmailConfig.SMTP_port_input, '25')
-                //local config .setValue('//*[@id="conf_id_PS_MAIL_SMTP_PORT"]/div/input', '1025')
-
+                .setValue(this.selector.EmailConfig.SMTP_port_input, '25') //local config .setValue('//*[@id="conf_id_PS_MAIL_SMTP_PORT"]/div/input', '1025')
                 .click(this.selector.EmailConfig.save_config_button)
                 .call(done);
         });
@@ -67,9 +61,9 @@ describe('Email SMTP configuration in Back Office', function () {
                 .waitForExist(this.selector.EmailConfig.mail_result_block, 90000)
                 .pause(2000)
                 .getText(this.selector.EmailConfig.mail_result_block).then(function(text) {
-                var my_text_check = text;
-                should(my_text_check).be.equal("A test email has been sent to the email address you provided.");
-            })
+                    var my_text_check = text;
+                    should(my_text_check).be.equal("A test email has been sent to the email address you provided.");
+                })
                 .call(done);
         });
 
@@ -79,8 +73,6 @@ describe('Email SMTP configuration in Back Office', function () {
                 .signoutBO()
                 .call(done);
         });
-
-
     });
 
     describe('log into SMTP page', function (done) {
@@ -91,9 +83,9 @@ describe('Email SMTP configuration in Back Office', function () {
                 .waitForExist(this.selector.EmailConfig.last_received_mail, 90000)
                 .click(this.selector.EmailConfig.last_received_mail)
                 .getText(this.selector.EmailConfig.test_received_mail).then(function(text) {
-                var my_text_check = text;
-                 should(my_text_check).be.equal('This is a test message. Your server is now configured to send email.');
-                 })
+                    var my_text_check = text;
+                    should(my_text_check).be.equal('This is a test message. Your server is now configured to send email.');
+                })
                 .call(done);
         });
     });

@@ -24,7 +24,6 @@ describe('Verify sending an email to reset the password', function () {
     });
 
     describe('check sending an email of rest the password', function (done) {
-
         it('should check the received email ', function (done) {
             global.fctname = this.test.title;
             this.client
@@ -35,7 +34,6 @@ describe('Verify sending an email to reset the password', function () {
                 .click(this.selector.EmailConfig.forget_password_email_button)
                 .call(done);
         });
-
     });
 
     describe('Validation Email', function (done) {
@@ -45,10 +43,9 @@ describe('Verify sending an email to reset the password', function () {
                 .url('http://localhost:1080')
                 .waitForExist(this.selector.EmailConfig.title_received_mail, 90000)
                 .getText(this.selector.EmailConfig.title_received_mail).then(function(text) {
-                    console.log(text)
                     global.mailTitle = text.indexOf('Password query confirmation');
                     if(global.mailTitle == -1){
-                        done(new Error("Failed to send e-mail"));
+                        done(new Error("Failed to receive email"));
                     }else{
                         done();
                     }
