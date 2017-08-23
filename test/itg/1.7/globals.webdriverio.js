@@ -123,7 +123,10 @@ module.exports = {
             last_received_mail:'/html/body/div/div[1]/div[2]/ul/li',
             test_received_mail:'/html/body/div/div[2]/div[2]/div/div[1]',
             create_account_received_mail:'/html/body/div/div[1]/div[2]/ul/li[1]',
-            title_received_mail:'/html/body/div/div[1]/div[2]/ul/li[1]/a/span[1]'
+            title_received_mail:'/html/body/div/div[1]/div[2]/ul/li[1]/a/span[1]',
+            forget_password_button:'//*[@id="login-form"]/section/div[3]/a',
+            forget_password_input:'//*[@id="email"]',
+            forget_password_email_button:'//*[@id="content"]/form/section/div/button[1]'
         },
 
         //FO
