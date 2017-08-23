@@ -84,10 +84,10 @@ describe('The Creation of an Account in Front Office', function () {
             global.fctname = this.test.title;
             this.client
                 .url('http://localhost:1080')
-                .waitForExist('/html/body/div/div[1]/div[2]/ul/li[1]', 3000)
-                .click('/html/body/div/div[1]/div[2]/ul/li[1]')
-                .waitForExist('/html/body/div/div[1]/div[2]/ul/li[1]/a/span[1]', 3000)
-                .getText('/html/body/div/div[1]/div[2]/ul/li[1]/a/span[1]').then(function(text) {
+                .waitForExist(this.selector.EmailConfig.create_account_received_mail, 3000)
+                .click(this.selector.EmailConfig.create_account_received_mail)
+                .waitForExist(this.selector.EmailConfig.title_received_mail, 3000)
+                .getText(this.selector.EmailConfig.title_received_mail).then(function(text) {
                     global.maildesciption = text.indexOf('Welcome');
                     if(global.maildesciption == -1){
                         done(new Error("Failed to send e-mail"));

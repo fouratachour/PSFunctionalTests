@@ -112,8 +112,18 @@ module.exports = {
             advanced_parameter_button:'//*[@id="subtab-AdminAdvancedParameters"]/a',
             email_setting_button:'//*[@id="subtab-AdminEmails"]/a',
             email_seeting_menu:'//*[@id="mailResultCheck"]',
-
-
+            custum_SMTP_parameter_radio:'//*[@id="conf_id_PS_MAIL_METHOD"]/div/p[2]/label',
+            SMTP_server_input:'//*[@id="conf_id_PS_MAIL_SERVER"]/div/input',
+            SMTP_user_input:'//*[@id="conf_id_PS_MAIL_USER"]/div/input',
+            SMTP_password_input:'//*[@id="conf_id_PS_MAIL_PASSWD"]/div/input',
+            SMTP_port_input:'//*[@id="conf_id_PS_MAIL_SMTP_PORT"]/div/input',
+            save_config_button:'//*[@id="mail_fieldset_smtp"]/div[3]/button',
+            send_email_button:'//*[@id="mail_fieldset_test"]/div[4]/button',
+            mail_result_block:'//*[@id="mailResultCheck"]',
+            last_received_mail:'/html/body/div/div[1]/div[2]/ul/li',
+            test_received_mail:'/html/body/div/div[2]/div[2]/div/div[1]',
+            create_account_received_mail:'/html/body/div/div[1]/div[2]/ul/li[1]',
+            title_received_mail:'/html/body/div/div[1]/div[2]/ul/li[1]/a/span[1]'
         },
 
         //FO
