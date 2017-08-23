@@ -44,9 +44,8 @@ describe('Email SMTP configuration in Back Office', function () {
                 .pause(2000)
                 .waitForExist(this.selector.EmailConfig.SMTP_server_input, 90000)
 
-                //.setValue(this.selector.EmailConfig.SMTP_server_input, '10.0.2.3')
-                //local config
-                .setValue('//*[@id="conf_id_PS_MAIL_SERVER"]/div/input', 'localhost')
+                .setValue(this.selector.EmailConfig.SMTP_server_input, '10.0.2.3')
+                //local config .setValue('//*[@id="conf_id_PS_MAIL_SERVER"]/div/input', 'localhost')
 
                 .waitForExist(this.selector.EmailConfig.SMTP_user_input, 90000)
                 .setValue(this.selector.EmailConfig.SMTP_user_input, 'demo@presta.com')
@@ -54,9 +53,8 @@ describe('Email SMTP configuration in Back Office', function () {
                 .setValue(this.selector.EmailConfig.SMTP_password_input, '123456789')
                 .waitForExist(this.selector.EmailConfig.SMTP_port_input, 90000)
 
-                //.setValue(this.selector.EmailConfig.SMTP_port_input, '25')
-                //local config
-                .setValue('//*[@id="conf_id_PS_MAIL_SMTP_PORT"]/div/input', '1025')
+                .setValue(this.selector.EmailConfig.SMTP_port_input, '25')
+                //local config .setValue('//*[@id="conf_id_PS_MAIL_SMTP_PORT"]/div/input', '1025')
 
                 .click(this.selector.EmailConfig.save_config_button)
                 .call(done);
