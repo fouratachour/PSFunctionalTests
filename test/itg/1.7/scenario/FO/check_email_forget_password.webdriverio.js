@@ -46,7 +46,7 @@ describe('Verify sending an email to reset the password', function () {
                 .waitForExist(this.selector.EmailConfig.title_received_mail, 90000)
                 .getText(this.selector.EmailConfig.title_received_mail).then(function(text) {
                     console.log(text)
-                    global.mailTitle = text.indexOf('Password Request Confirmation');
+                    global.mailTitle = text.indexOf('Password query confirmation');
                     if(global.mailTitle == -1){
                         done(new Error("Failed to send e-mail"));
                     }else{
