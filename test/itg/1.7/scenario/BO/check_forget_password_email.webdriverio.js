@@ -53,7 +53,7 @@ describe('The Check of the order in Back Office', function () {
                 .waitForExist(this.selector.Email_confirmation_message, 90000)
                 .getText(this.selector.Email_confirmation_message).then(function(text) {
                     console.log(text);
-                    global.mailTitle = text.indexOf('Un lien pour réinitialiser votre mot de passe vous a été envoyé.');
+                    global.mailTitle = text.indexOf('A link to reset your password has been sent to you.');
                     if(global.mailTitle == -1){
                         done(new Error("Send Mail Failed"));
                     }else{
@@ -69,7 +69,7 @@ describe('The Check of the order in Back Office', function () {
                 .waitForExist(this.selector.EmailConfigPage.title_received_mail, 90000)
                 .getText(this.selector.EmailConfigPage.title_received_mail).then(function(text) {
                     console.log(text)
-                    global.mailTitle = text.indexOf('Votre nouveau mot de passe');
+                    global.mailTitle = text.indexOf('Your new password');
                     if(global.mailTitle == -1){
                         done(new Error("Failed to receive email"));
                     }else{
