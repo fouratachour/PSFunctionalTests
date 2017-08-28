@@ -42,7 +42,6 @@ describe('The Install of a Module and its Uninstall', function () {
     describe('Install module', function (done) {
         it('should go to modules page', function (done) {
             global.fctname = this.test.title;
-
             if (exit_welcome) {
             this.client
                     .waitForExist(this.selector.BO.AddProductPage.exit_welcome_button, 90000)
@@ -57,7 +56,6 @@ describe('The Install of a Module and its Uninstall', function () {
 
         it('should go to the module', function (done) {
             global.fctname = this.test.title;
-
             this.client
                 .setValue(this.selector.BO.ModulePage.search_input, module_tech_name)
                 .click(this.selector.BO.ModulePage.search_button)
