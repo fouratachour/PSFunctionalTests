@@ -27,19 +27,24 @@ describe('Allscenario', function () {
     }
 
     // configuration of smtp mail server
-             require('./scenario/BO/email_configuration.webdriverio');
+     require('./scenario/BO/email_configuration.webdriverio');
+
+    //check sending an email to reset the password customer
+     require('./scenario/BO/check_forget_password_email.webdriverio');
+
     //create a product in BO and check it in FO
-   // require('./scenario/BO/create_product.webdriverio');
-    //require('./scenario/FO/check_product.webdriverio');
+     //require('./scenario/BO/create_product.webdriverio');
+     //require('./scenario/FO/check_product.webdriverio');
 
     //create an order in FO and check it in BO
-             //require('./scenario/FO/buy_product.webdriverio');
-    //require('./scenario/BO/check_order.webdriverio');
+     //require('./scenario/FO/buy_product.webdriverio');
+     //require('./scenario/BO/check_order.webdriverio');
 
     //create an account in FO
-           //require('./scenario/FO/create_account.webdriverio');
-    //check sending an email to reset the password
-           require('./scenario/FO/check_email_forget_password.webdriverio')
+     //require('./scenario/FO/create_account.webdriverio');
+
+    //check sending an email to reset the password customer
+     //require('./scenario/FO/check_forget_password_email.webdriverio.js')
 
     if (typeof module_tech_name !== 'undefined' && module_tech_name != "None") {
         require('./scenario/BO/uninstall_module.js');

@@ -189,8 +189,8 @@ describe('The Purchase of a product', function () {
             global.fctname = this.test.title;
             this.client
                 .url('http://localhost:1080')
-                .waitForExist(this.selector.EmailConfig.title_received_mail, 90000)
-                .getText(this.selector.EmailConfig.title_received_mail).then(function(text) {
+                .waitForExist(this.selector.EmailConfigPage.title_received_mail, 90000)
+                .getText(this.selector.EmailConfigPage.title_received_mail).then(function(text) {
                     global.mailTitle = text.indexOf('Order confirmation');
                     if(global.mailTitle == -1){
                         done(new Error("Failed to receive email"));
