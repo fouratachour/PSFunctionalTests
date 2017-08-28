@@ -19,7 +19,7 @@ describe('The Check of the order in Back Office', function () {
             global.fctname = this.test.title;
             this.client
                 .url('http://' + URL + '/admin-dev')
-                .waitForExist(this.selector.forget_password_button, 90000)
+                .waitForExist(this.selector.EmailPasswordForgot.forget_password_button, 90000)
                 .call(done);
         });
     });
@@ -29,20 +29,20 @@ describe('The Check of the order in Back Office', function () {
         it('Should go to forgotten password page', function (done) {
             global.fctname = this.test.title;
             this.client
-                .waitForExist(this.selector.forget_password_button, 90000)
-                .click(this.selector.forget_password_button)
+                .waitForExist(this.selector.EmailPasswordForgot.forget_password_button, 90000)
+                .click(this.selector.EmailPasswordForgot.forget_password_button)
                 .pause(3000)
-                .waitForExist(this.selector.email_forgot_input, 90000)
+                .waitForExist(this.selector.EmailPasswordForgot.email_forgot_input, 90000)
                 .call(done);
         });
 
         it('should enter the forgotten email password and click the submit button', function (done) {
             global.fctname = this.test.title;
             this.client
-                .waitForExist(this.selector.email_forgot_input, 90000)
-                .setValue(this.selector.email_forgot_input, 'demo@prestashop.com')
-                .waitForExist(this.selector.email_forgot_button, 90000)
-                .click(this.selector.email_forgot_button)
+                .waitForExist(this.selector.EmailPasswordForgot.email_forgot_input, 90000)
+                .setValue(this.selector.EmailPasswordForgot.email_forgot_input, 'demo@prestashop.com')
+                .waitForExist(this.selector.EmailPasswordForgot.email_forgot_button, 90000)
+                .click(this.selector.EmailPasswordForgot.email_forgot_button)
                 .pause(3000)
                 .call(done);
         });
@@ -50,9 +50,8 @@ describe('The Check of the order in Back Office', function () {
         it('Should check the sending message', function (done) {
             global.fctname = this.test.title;
             this.client
-                .waitForExist(this.selector.Email_confirmation_message, 90000)
-                .getText(this.selector.Email_confirmation_message).then(function(text) {
-                    console.log(text);
+                .waitForExist(this.selector.EmailPasswordForgot.email_confirmation_message, 90000)
+                .getText(this.selector.EmailPasswordForgot.email_confirmation_message).then(function(text) {
                     global.mailTitle = text.indexOf('A link to reset your password has been sent to you.');
                     if(global.mailTitle == -1){
                         done(new Error("Send Mail Failed"));
@@ -68,7 +67,6 @@ describe('The Check of the order in Back Office', function () {
                 .url('http://localhost:1080')
                 .waitForExist(this.selector.EmailConfigPage.title_received_mail, 90000)
                 .getText(this.selector.EmailConfigPage.title_received_mail).then(function(text) {
-                    console.log(text)
                     global.mailTitle = text.indexOf('Your new password');
                     if(global.mailTitle == -1){
                         done(new Error("Failed to receive email"));

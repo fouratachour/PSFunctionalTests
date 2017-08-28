@@ -27,8 +27,8 @@ describe('Verify sending an email to reset the password', function () {
         it('should check the received email ', function (done) {
             global.fctname = this.test.title;
             this.client
-                .waitForExist(this.selector.EmailConfigPage.forget_password_button, 90000)
-                .click(this.selector.EmailConfigPage.forget_password_button)
+                .waitForExist(this.selector.EmailConfigPage.EmailPasswordForgot.forget_password_button, 90000)
+                .click(this.selector.EmailConfigPage.EmailPasswordForgot.forget_password_button)
                 .waitForExist(this.selector.EmailConfigPage.forget_password_input, 90000)
                 .setValue(this.selector.EmailConfigPage.forget_password_input, 'pub@prestashop.com')
                 .click(this.selector.EmailConfigPage.forget_password_email_button)

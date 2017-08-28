@@ -103,11 +103,12 @@ module.exports = {
         uninstall_module_btn: '//div[@data-tech-name="' + module_tech_name + '" and not(@style)]//button[@class="dropdown-item module_action_menu_uninstall"]',
         modal_confirm_uninstall: '//*[@id="module-modal-confirm-' + module_tech_name + '-uninstall" and @class="modal modal-vcenter fade in"]//a[@class="btn btn-primary uppercase module_action_modal_uninstall"]',
 
-        forget_password_button:'//*[@id="login_form"]/div[4]/a',
-        email_forgot_input:'//*[@id="email_forgot"]',
-        email_forgot_button:'//*[@id="forgot_password_form"]/div[2]/button[2]',
-        Email_confirmation_message:'//*[@id="forgot_confirm_name"]',
-
+        EmailPasswordForgot:{
+            forget_password_button:'//*[@id="login_form"]/div[4]/a',
+            email_forgot_input:'//*[@id="email_forgot"]',
+            email_forgot_button:'//*[@id="forgot_password_form"]/div[2]/button[2]',
+            email_confirmation_message:'//*[@id="forgot_confirm_name"]',
+        },
 
         onboarding_popup: '.onboarding-popup',
         onboarding_popup_close_btn: '.onboarding-button-shut-down',
