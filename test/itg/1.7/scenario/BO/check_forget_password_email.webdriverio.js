@@ -19,7 +19,7 @@ describe('The Check of the order in Back Office', function () {
             global.fctname = this.test.title;
             this.client
                 .url('http://' + URL + '/admin-dev')
-                .waitForExist(this.selector.EmailPasswordForgot.forget_password_button, 90000)
+                .waitForExist(this.selector.EmailPasswordForgot.forgotten_password_button, 90000)
                 .call(done);
         });
     });
@@ -29,8 +29,8 @@ describe('The Check of the order in Back Office', function () {
         it('Should go to forgotten password page', function (done) {
             global.fctname = this.test.title;
             this.client
-                .waitForExist(this.selector.EmailPasswordForgot.forget_password_button, 90000)
-                .click(this.selector.EmailPasswordForgot.forget_password_button)
+                .waitForExist(this.selector.EmailPasswordForgot.forgotten_password_button, 90000)
+                .click(this.selector.EmailPasswordForgot.forgotten_password_button)
                 .pause(3000)
                 .waitForExist(this.selector.EmailPasswordForgot.email_forgot_input, 90000)
                 .call(done);

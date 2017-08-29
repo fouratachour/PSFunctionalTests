@@ -104,7 +104,7 @@ module.exports = {
         modal_confirm_uninstall: '//*[@id="module-modal-confirm-' + module_tech_name + '-uninstall" and @class="modal modal-vcenter fade in"]//a[@class="btn btn-primary uppercase module_action_modal_uninstall"]',
 
         EmailPasswordForgot:{
-            forget_password_button:'//*[@id="login_form"]/div[4]/a',
+            forgotten_password_button:'//*[@id="login_form"]/div[4]/a',
             email_forgot_input:'//*[@id="email_forgot"]',
             email_forgot_button:'//*[@id="forgot_password_form"]/div[2]/button[2]',
             email_confirmation_message:'//*[@id="forgot_confirm_name"]',
@@ -131,9 +131,9 @@ module.exports = {
             test_received_mail:'/html/body/div/div[2]/div[2]/div/div[1]',
             create_account_received_mail:'/html/body/div/div[1]/div[2]/ul/li[1]',
             title_received_mail:'/html/body/div/div[1]/div[2]/ul/li[1]/a/span[1]',
-            forget_password_button:'//*[@id="login-form"]/section/div[3]/a',
-            forget_password_input:'//*[@id="email"]',
-            forget_password_email_button:'//*[@id="content"]/form/section/div/button[1]'
+            forgotten_password_button:'//*[@id="login-form"]/section/div[3]/a',
+            forgotten_password_input:'//*[@id="email"]',
+            forgotten_password_email_button:'//*[@id="content"]/form/section/div/button[1]'
         },
 
         //FO
