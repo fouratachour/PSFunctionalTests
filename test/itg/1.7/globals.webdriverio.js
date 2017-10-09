@@ -12,6 +12,9 @@ global.selenium_url = argv.SELENIUM;
 global._projectdir = path.join(__dirname, '..', '..');
 global.product_id = new Date().getTime();
 global.new_customer_email = 'pub' + date_time + '@prestashop.com';
+global.categoryNameTable = [];
+global.categoryImage = path.join(__dirname, '', 'datas', 'category_image.png');
+global.categoryThumb = path.join(__dirname, '', 'datas', 'category_miniature.png');
 
 module.exports = {
     selector: {
@@ -79,6 +82,44 @@ module.exports = {
                 catalogue_filter_by_name_input: '//input[@name="filter_column_name"]',
                 catalogue_submit_filter_button: '//button[@name="products_filter_submit"]'
             },
+
+            //catalog selector
+            CatalogPage:{
+                menu_button:'//*[@id="subtab-AdminCatalog"]/a',
+                CategorySubmenu:{
+                    submenu:'//*[@id="subtab-AdminCategories"]/a',
+                    new_category_button:'//*[@id="page-header-desc-category-new_category"]/div',
+                    name_input:'//*[@id="name_1"]',
+                    description_textarea:'textarea#description_1',
+                    picture:'//*[@id="image"]',
+                    thumb_picture:'//*[@id="thumb"]',
+                    title:'//*[@id="meta_title_1"]',
+                    meta_description:'//*[@id="meta_description_1"]',
+                    keyswords:'//*[@id="fieldset_0"]/div[2]/div[10]/div/div/input',
+                    keyswords_text:'//*[@id="fieldset_0"]/div[2]/div[10]/div/div/span',
+                    simplify_URL_input:'//*[@id="link_rewrite_1"]',
+                    save_button:'//*[@id="category_form_submit_btn"]',
+                    success_panel:'//*[@id="content"]/div[3]/div',
+                    name_search_input:'//*[@id="table-category"]/thead/tr[2]/th[3]/input',
+                    search_button:'//*[@id="submitFilterButtoncategory"]',
+                    search_result:'//*[@id="table-category"]/tbody/tr/td[3]',
+                    update_button:'//*[@id="table-category"]/tbody/tr/td[7]/div/div',
+                    action_button:'//*[@id="table-category"]/tbody/tr/td[7]/div/div/button',
+                    delete_button:'//*[@id="table-category"]/tbody/tr/td[7]/div/div/ul/li[2]/a',
+                    image_link:'//*[@id="image-images-thumbnails"]/div/img',
+                    thumb_link:'//*[@id="thumb-images-thumbnails"]/div/img',
+                    second_delete_button:'//*[@id="content"]/div[5]/div/div[2]/div/form/div[5]/button[2]',
+                    select_category:'//*[@id="table-category"]/tbody/tr/td[1]/input',
+                    action_group_button:'//*[@id="form-category"]/div/div[3]/div/div/button',
+                    delete_action_group_button:'//*[@id="form-category"]/div/div[3]/div/div/ul/li[7]/a',
+                },
+                AttributeSubmenu:{
+                    submenu:'//*[@id="subtab-AdminParentAttributesGroups"]/a',
+                    add_new_attrribut:'//*[@id="page-header-desc-attribute_group-new_attribute_group"]',
+                }
+
+            },
+
             //Order selector
             OrderPage:{
                 orders_subtab: '#subtab-AdminParentOrders',
@@ -121,7 +162,8 @@ module.exports = {
                 password_input: '//*[@id="login-form"]/section/div[2]/div[1]/div/input',
                 login_button: '//*[@id="login-form"]/footer/button',
                 sign_out_button: '.logout',
-                logo_home_page: '.logo.img-responsive'
+                logo_home_page: '.logo.img-responsive',
+                product_list_button:'//*[@id="content"]/section/a'
             },
             //Account page selector
             AddAccountPage: {
