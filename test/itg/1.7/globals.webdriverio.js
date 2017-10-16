@@ -157,7 +157,8 @@ module.exports = {
                 password_input: '//*[@id="login-form"]/section/div[2]/div[1]/div/input',
                 login_button: '//*[@id="login-form"]/footer/button',
                 sign_out_button: '.logout',
-                logo_home_page: '.logo.img-responsive'
+                logo_home_page: '.logo.img-responsive',
+                product_list_button:'//*[@id="content"]/section/a'
             },
             //Account page selector
             AddAccountPage: {
