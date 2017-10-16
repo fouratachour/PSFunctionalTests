@@ -27,15 +27,11 @@ describe('High campagnes', function () {
     }
 
     // CRUD category
-    //require('../scenario/BO/category/create_category.webdriverio.js');
-    //require('../scenario/BO/category/update_category.webdriverio.js');
-    //require('../scenario/BO/category/delete_category.webdriverio.js');
+    require('../scenario/BO/category/create_category.webdriverio.js');
+    require('../scenario/BO/category/update_category.webdriverio.js');
+    require('../scenario/BO/category/delete_category.webdriverio.js');
 
-    //CRUD Attributs
-    require('../scenario/BO/Attributs/create_attributes.webdriverio');
-    require('../scenario/BO/Attributs/update_attributes.webdriverio');
-    require('../scenario/BO/Attributs/delete_attribute_value.webdriverio');
-    require('../scenario/BO/Attributs/delete_attribute.webdriverio');
+
 
     if (typeof module_tech_name !== 'undefined' && module_tech_name != "None") {
         require('./scenario/BO/uninstall_module.js');
