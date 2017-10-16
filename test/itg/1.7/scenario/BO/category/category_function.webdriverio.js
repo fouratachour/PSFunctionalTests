@@ -42,7 +42,6 @@ module.exports = {
         it("should add new category thumb", function (done) {
             global.fctname = this.test.title;
             this.client
-
                 .execute(function () {
                     document.getElementById("thumb").style = "";
                 })
@@ -91,7 +90,7 @@ module.exports = {
                 .waitForExist(this.selector.BO.CatalogPage.CategorySubmenu.success_panel)
                 .getText(this.selector.BO.CatalogPage.CategorySubmenu.success_panel).then(function (text) {
                 text = text.indexOf('Création réussie.');
-                if (text === -1){
+                if (text === -1) {
                     done(new Error('the category is not created !'));
                 }else
                     done();
@@ -119,10 +118,10 @@ module.exports = {
                 .click(this.selector.BO.CatalogPage.CategorySubmenu.search_button)
                 .getText(this.selector.BO.CatalogPage.CategorySubmenu.search_result).then(function (text) {
                 text = text.indexOf(global.categoryName);
-                if (text === -1){
+                if (text === -1) {
                     done(new Error('we could not find the category in the list of category'));
                 }else
-                    done()
+                    done();
             })
         });
 
@@ -132,10 +131,10 @@ module.exports = {
                 .waitForExist(this.selector.BO.CatalogPage.CategorySubmenu.update_button, 90000)
                 .click(this.selector.BO.CatalogPage.CategorySubmenu.update_button)
                 .isExisting(this.selector.BO.CatalogPage.CategorySubmenu.image_link).then(function(text) {
-                if (text === false){
+                if (text === false) {
                     done(new Error('we could not find the image'));
                 }else
-                    done()
+                    done();
             })
         });
 
@@ -146,7 +145,7 @@ module.exports = {
                 if (text === false){
                     done(new Error('we could not find the thumb image'));
                 }else
-                    done()
+                    done();
             })
         });
 
@@ -173,8 +172,8 @@ module.exports = {
             this.client
                 .getText(this.selector.BO.CatalogPage.CategorySubmenu.keyswords_text).then(function(text) {
                 var alt = text.toLowerCase();
-                var isexist = alt.indexOf('keyswords');
-                should(isexist).not.be.equal(-1);
+                var isExist = alt.indexOf('keyswords');
+                should(isExist).not.be.equal(-1);
             })
                 .call(done);
         });
@@ -194,12 +193,12 @@ module.exports = {
             global.criteriaDisplay=0;
             global.testResulat=false;
             browser
-                .elements('//*[@id="left-column"]/div[1]/ul/li[2]/ul/li').then(function (lenght) {
-                global.criteriaDisplay=  lenght.value.length
+                .elements('//*[@id="left-column"]/div[1]/ul/li[2]/ul/li').then(function (length) {
+                global.criteriaDisplay=  length.value.length
             })
                 .waitUntil(function() {
                     return browser.getText('//*[@id="left-column"]/div[1]/ul/li[2]/ul/li['+i+']/a').then(function (name) {
-                        if(name === global.categoryName){
+                        if (name === global.categoryName) {
                             global.testResulat=true
                         }
                         categoryNameTable[i] = name;

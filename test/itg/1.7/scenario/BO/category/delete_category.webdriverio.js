@@ -78,7 +78,7 @@ describe('The category Delete', function () {
                 .waitForExist(this.selector.BO.CatalogPage.CategorySubmenu.success_panel)
                 .getText(this.selector.BO.CatalogPage.CategorySubmenu.success_panel).then(function (text) {
                     text = text.indexOf('Suppression réussie.');
-                    if (text === -1){
+                    if (text === -1) {
                         done(new Error('the category is not deleted !'));
                     }else
                         done();
@@ -88,7 +88,7 @@ describe('The category Delete', function () {
     });
     // add new category to delete
     describe('create new category', function (done) {
-        categoryFunction.createCategory()
+        categoryFunction.createCategory();
     });
 
     //delete with action group
@@ -100,21 +100,15 @@ describe('The category Delete', function () {
                 .setValue(this.selector.BO.CatalogPage.CategorySubmenu.name_search_input,global.categoryName)
                 .waitForExist(this.selector.BO.CatalogPage.CategorySubmenu.search_button, 90000)
                 .click(this.selector.BO.CatalogPage.CategorySubmenu.search_button)
-
                 .waitForExist(this.selector.BO.CatalogPage.CategorySubmenu.select_category, 90000)
                 .click(this.selector.BO.CatalogPage.CategorySubmenu.select_category)
-
                 .waitForExist(this.selector.BO.CatalogPage.CategorySubmenu.action_group_button, 90000)
                 .click(this.selector.BO.CatalogPage.CategorySubmenu.action_group_button)
-
                 .waitForExist(this.selector.BO.CatalogPage.CategorySubmenu.delete_action_group_button, 90000)
                 .click(this.selector.BO.CatalogPage.CategorySubmenu.delete_action_group_button)
-
                 .alertAccept()
-
                 .waitForExist(this.selector.BO.CatalogPage.CategorySubmenu.second_delete_button, 90000)
                 .click(this.selector.BO.CatalogPage.CategorySubmenu.second_delete_button)
-
                 .waitForExist(this.selector.BO.CatalogPage.CategorySubmenu.success_panel)
                 .getText(this.selector.BO.CatalogPage.CategorySubmenu.success_panel).then(function (text) {
                 text = text.indexOf('Sélection supprimée avec succès');
@@ -123,7 +117,6 @@ describe('The category Delete', function () {
                 }else
                     done();
                 })
-
         });
     });
     describe('Log out in Back Office', function (done) {

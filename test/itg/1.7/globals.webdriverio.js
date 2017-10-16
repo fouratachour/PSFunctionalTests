@@ -80,7 +80,15 @@ module.exports = {
                 picture_cover: '.iscover',
                 product_online_toggle: '.switch-input ',
                 catalogue_filter_by_name_input: '//input[@name="filter_column_name"]',
-                catalogue_submit_filter_button: '//button[@name="products_filter_submit"]'
+                catalogue_submit_filter_button: '//button[@name="products_filter_submit"]',
+                variations_type_button:'//*[@id="show_variations_selector"]/div[2]/label/input',
+                variations_tab:'//*[@id="tab_step3"]/a',
+                variations_input:'//*[@id="form_step3_attributes-tokenfield"]',
+                variations_generate:'//*[@id="create-combinations"]',
+                variations_select:'//*[@id="attributes-generator"]/div[2]/div[1]/fieldset/div/span/div/div/div',
+                var_selected:'//*[@id="toggle-all-combinations"]',
+                var_selected_quantitie:'//*[@id="product_combination_bulk_quantity"]',
+                save_quantitie_button:'//*[@id="apply-on-combinations"]',
             },
 
             //catalog selector
@@ -111,13 +119,30 @@ module.exports = {
                     second_delete_button:'//*[@id="content"]/div[5]/div/div[2]/div/form/div[5]/button[2]',
                     select_category:'//*[@id="table-category"]/tbody/tr/td[1]/input',
                     action_group_button:'//*[@id="form-category"]/div/div[3]/div/div/button',
-                    delete_action_group_button:'//*[@id="form-category"]/div/div[3]/div/div/ul/li[7]/a',
+                    delete_action_group_button:'//*[@id="form-category"]/div/div[3]/div/div/ul/li[7]/a'
                 },
                 AttributeSubmenu:{
                     submenu:'//*[@id="subtab-AdminParentAttributesGroups"]/a',
-                    add_new_attrribut:'//*[@id="page-header-desc-attribute_group-new_attribute_group"]',
+                    add_new_attribute:'//*[@id="page-header-desc-attribute_group-new_attribute_group"]',
+                    name_input:'//*[@id="name_1"]',
+                    public_name_input:'//*[@id="public_name_1"]',
+                    type_select:'//*[@id="group_type"]',
+                    save_button:'//*[@id="attribute_group_form_submit_btn"]',
+                    success_panel:'//*[@id="content"]/div[3]/div',
+                    search_input:'//*[@id="table-attribute_group"]/thead/tr[2]/th[3]/input',
+                    search_button:'//*[@id="submitFilterButtonattribute_group"]',
+                    selected_attribute:'//*[@id="table-attribute_group"]/tbody/tr/td[3]',
+                    add_value_button:'//*[@id="page-header-desc-attribute-new_value"]',
+                    save_and_add:'//*[@id="fieldset_0"]/div[3]/button[2]',
+                    save:'//*[@id="attribute_form_submit_btn"]',
+                    value_input:'//*[@id="name_1"]',
+                    value_action_group_button:'//*[@id="table-attribute"]/tbody/tr[1]/td[5]/div/div/button',
+                    delete_value_button:'//*[@id="table-attribute"]/tbody/tr[1]/td[5]/div/div/ul/li/a',
+                    group_action_button:'//*[@id="table-attribute_group"]/tbody/tr/td[6]/div/div/button',
+                    delete_attribut_button:'//*[@id="table-attribute_group"]/tbody/tr/td[6]/div/div/ul/li[3]/a',
+                    update_button:'//*[@id="table-attribute_group"]/tbody/tr/td[6]/div/div/ul/li[1]/a',
+                    update_value_button:'//*[@id="table-attribute"]/tbody/tr[1]/td[5]/div/div/a'
                 }
-
             },
 
             //Order selector
@@ -207,13 +232,14 @@ module.exports = {
             },
             //Search selector
             SearchProductPage:{
+                category_list:'//*[@id="left-column"]/div[1]/ul/li[2]/ul/li',
                 product_search_input: '.ui-autocomplete-input',
                 product_search_button: '.material-icons.search',
                 product_result_name: '.h3.product-title > a',
                 product_result_price: '[itemprop="price"]',
+                attribut_name:'//*[@id="add-to-cart-or-refresh"]/div[1]/div/span'
             }
-        },
-
+        }
 
     },
     shouldExist: function (err, existing) {

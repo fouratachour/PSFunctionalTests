@@ -96,7 +96,7 @@ describe('The category update', function () {
     });
 
     describe('Check updated category in BO', function (done) {
-        categoryFunction.checkCategoryBO()
+        categoryFunction.checkCategoryBO();
     });
 
     describe('Log out in Back Office', function (done) {
@@ -109,7 +109,7 @@ describe('The category update', function () {
     });
 
     describe('Check updated category in FO', function (done) {
-        categoryFunction.checkCategoryFO()
+        categoryFunction.checkCategoryFO();
     });
 
 });

@@ -1,9 +1,9 @@
 'use strict';
 var should = require('should');
-var common = require('./common.webdriverio');
+var common = require('../common.webdriverio');
 
 
-describe('Allscenario', function () {
+describe('High campagnes', function () {
     common.initMocha.call(this);
 
     before(function (done) {
@@ -26,16 +26,16 @@ describe('Allscenario', function () {
         require('./scenario/BO/install_module.js');
     }
 
-    //create a product in BO and check it in FO
-    //require('./scenario/BO/create_product.webdriverio');
-    //require('./scenario/FO/check_product.webdriverio');
+    // CRUD category
+    //require('../scenario/BO/category/create_category.webdriverio.js');
+    //require('../scenario/BO/category/update_category.webdriverio.js');
+    //require('../scenario/BO/category/delete_category.webdriverio.js');
 
-    //create an order in FO and check it in BO
-    //require('./scenario/FO/buy_product.webdriverio');
-    //require('./scenario/BO/check_order.webdriverio');
-
-    //create an account in FO
-    //require('./scenario/FO/create_account.webdriverio');
+    //CRUD Attributs
+    require('../scenario/BO/Attributs/create_attributes.webdriverio');
+    require('../scenario/BO/Attributs/update_attributes.webdriverio');
+    require('../scenario/BO/Attributs/delete_attribute_value.webdriverio');
+    require('../scenario/BO/Attributs/delete_attribute.webdriverio');
 
     if (typeof module_tech_name !== 'undefined' && module_tech_name != "None") {
         require('./scenario/BO/uninstall_module.js');

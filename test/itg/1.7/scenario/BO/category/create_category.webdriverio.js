@@ -43,11 +43,11 @@ describe('The category Creation', function () {
     });
 
     describe('Create new category', function (done) {
-        categoryFunction.createCategory()
+        categoryFunction.createCategory();
     });
 
     describe('Check created category in BO', function (done) {
-        categoryFunction.checkCategoryBO()
+        categoryFunction.checkCategoryBO();
     });
 
 
@@ -61,7 +61,7 @@ describe('The category Creation', function () {
     });
 
     describe('Check created category in FO', function (done) {
-        categoryFunction.checkCategoryFO()
+        categoryFunction.checkCategoryFO();
     });
 
 });

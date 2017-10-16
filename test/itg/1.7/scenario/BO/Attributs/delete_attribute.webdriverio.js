@@ -1,13 +1,12 @@
 'use strict';
 var should = require('should');
-var common = require('../../common.webdriverio');
-var globals = require('../../globals.webdriverio.js');
+var common = require('../../../common.webdriverio.js');
+var globals = require('../../../globals.webdriverio.js');
+var attributFunction = require('./attribut_function.webdriverio.js');
 var path = require('path');
 var toUpload = path.join(__dirname, '../..', 'datas', 'image_test.jpg');
 var devMode = false;
 var exit_welcome = false;
-
-
 describe('The category Creation', function () {
     common.initMocha.call(this);
 
@@ -42,57 +41,45 @@ describe('The category Creation', function () {
         });
     });
 
-    describe('Create new attributes', function (done) {
-        it("should go to category nad click on <Add new attribute> ", function (done) {
+    describe('Delete attributes', function (done) {
+        it("should go to attribute", function (done) {
             global.fctname = this.test.title;
             this.client
                 .waitForExist(this.selector.BO.CatalogPage.menu_button, 90000)
                 .moveToObject(this.selector.BO.CatalogPage.menu_button)
                 .waitForExist(this.selector.BO.CatalogPage.AttributeSubmenu.submenu, 90000)
                 .click(this.selector.BO.CatalogPage.AttributeSubmenu.submenu)
-                .waitForExist(this.selector.BO.CatalogPage.AttributeSubmenu.add_new_attrribut, 90000)
-                .click(this.selector.BO.CatalogPage.AttributeSubmenu.add_new_attrribut)
                 .call(done);
         });
-
-        it("should add new category", function (done) {
+    });
+    describe('Delete attributes ', function (done) {
+        it("should go to attribut  ", function (done) {
             global.fctname = this.test.title;
             this.client
-                .waitForExist(this.selector.BO.CatalogPage.name_input, 90000)
-                .setValue(this.selector.BO.CatalogPage.name_input,global.categoryName)
-                .waitForExist(this.selector.BO.CatalogPage.simplify_URL_input, 90000)
-                .setValue(this.selector.BO.CatalogPage.simplify_URL_input,'category' + global.category_id)
-                .waitForExist(this.selector.BO.CatalogPage.save_button, 90000)
-                .click(this.selector.BO.CatalogPage.save_button)
-                .waitForExist(this.selector.BO.CatalogPage.success_panel)
-                .getText(this.selector.BO.CatalogPage.success_panel).then(function (text) {
-                    text = text.indexOf('Création réussie.');
-                    if (text === -1){
-                        done(new Error('the category is not created !'));
-                    }else
-                        done();
-                })
+                .waitForExist(this.selector.BO.CatalogPage.AttributeSubmenu.search_input, 90000)
+                .setValue(this.selector.BO.CatalogPage.AttributeSubmenu.search_input,global.attributeName)
+                .waitForExist(this.selector.BO.CatalogPage.AttributeSubmenu.search_button, 90000)
+                .click(this.selector.BO.CatalogPage.AttributeSubmenu.search_button)
 
+               .call(done);
         });
 
-/*        it("should check the category created", function (done) {
-            global.fctname = this.test.title;
+        it("should delete attribute  ", function (done) {
             this.client
-                .waitForExist(this.selector.BO.CatalogPage.name_search_input, 90000)
-                .setValue(this.selector.BO.CatalogPage.name_search_input,'category'+ global.category_id)
-                .waitForExist(this.selector.BO.CatalogPage.search_button, 90000)
-                .click(this.selector.BO.CatalogPage.search_button)
-                .waitForExist(this.selector.BO.CatalogPage.search_result, 90000)
-                .getText(this.selector.BO.CatalogPage.search_result).then(function (text) {
-                    text = text.indexOf('category' + global.category_id);
+                .waitForExist(this.selector.BO.CatalogPage.AttributeSubmenu.group_action_button, 90000)
+                .click(this.selector.BO.CatalogPage.AttributeSubmenu.group_action_button)
+                .waitForExist(this.selector.BO.CatalogPage.AttributeSubmenu.delete_attribut_button, 90000)
+                .click(this.selector.BO.CatalogPage.AttributeSubmenu.delete_attribut_button)
+                .alertAccept()
+                .getText(this.selector.BO.CatalogPage.CategorySubmenu.success_panel).then(function (text) {
+                    text = text.indexOf('Suppression réussie.');
                     if (text === -1){
-                        done(new Error('we could not find the category in the list of category'));
+                        done(new Error('the attribute is not deleted'));
                     }else
                         done();
                 })
-        });*/
+        });
     });
-
 
 
     describe('Log out in Back Office', function (done) {
@@ -103,4 +90,9 @@ describe('The category Creation', function () {
                 .call(done);
         });
     });
+
+    describe('The Check of the Product attribute in Front Office', function (done) {
+        attributFunction.checkdeletedAttributFO()
+    });
+
 });
