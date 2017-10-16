@@ -1,0 +1,16 @@
+{
+  "presthost": {
+    "api_endpoint_url": "https://qa-presthost.prestashop.net",
+    "api_key": "shraheothVissyutNepgerrObryegif2.WryedghacThoFrikiltUnboBlidAlOc"
+  },
+  "tower": {
+    "endpoint": "qa-tower.prestashop.net"
+  },
+  "upgrade_shop": {
+    "initial_version": "1.7.2.1__20170921",
+    "target_version": "1.7.2.1__20171009"
+  },
+  "prestashop": {
+    "url": "localhost/prestashop_1.7.2.2"
+  }
+}

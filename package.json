@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "qa": "NODE_ENV=qa mocha test/campaigns --reporter mochawesome",
+    "high": "NODE_ENV=qa mocha test/campaigns/high --reporter mochawesome"
   },
   "repository": {
     "type": "git",
@@ -29,8 +30,17 @@
     "window": "^1.0"
   },
   "devDependencies": {
-    "dateformat": "^2.0.0",
-    "mochawesome": "^2.3.0",
-    "nodemailer": "^4.0.1"
+    "bluebird": "^3.5.1",
+    "chai": "^4.1.2",
+    "chai-string": "^1.4.0",
+    "config": "^1.26.2",
+    "dateformat": "3.0.2",
+    "mocha-prepare": "0.1.0",
+    "mochawesome": "2.3.0",
+    "nodemailer": "4.0.1",
+    "npm-check": "5.4.5",
+    "request": "^2.83.0",
+    "request-promise": "^4.2.2",
+    "wait-until": "0.0.2"
   }
 }
