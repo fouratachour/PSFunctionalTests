@@ -136,7 +136,30 @@ class PrestashopClient {
             })
     }
 
+    checkCategoryTitle(){
+        return this.client
+            .then(() => this.client.getAttribute(selector.BO.CatalogPage.CategorySubmenu.title, "value"))
+            .then((text) => expect(text).to.be.equal("test category"));
+    }
 
+    checkCategoryMetaDescription(){
+        return this.client
+            .then(() => this.client.getAttribute(selector.BO.CatalogPage.CategorySubmenu.meta_description,"value"))
+            .then((text) => expect(text).to.be.equal("this is the meta description"));
+    }
+
+    checkCategorykeyswordsText(){
+        return this.client
+            .then(() => this.client.getText(selector.BO.CatalogPage.CategorySubmenu.keyswords_text))
+            .then(text => expect(text).to.contains('keyswords'));
+    }
+
+    checkCategorySimplifyURL(){
+        return this.client
+            .then(() => this.client.getAttribute(selector.BO.CatalogPage.CategorySubmenu.simplify_URL_input,"value"))
+            .then((text) => expect(text).to.be.equal(global.categoryName));
+
+    }
 
     open() {
         return this.client.init().windowHandleSize({ width: 1280, height: 1024 });

@@ -17,5 +17,12 @@ scenario('Create category', client => {
 scenario('Check category in BO', client => {
     test('open browser', () => client.open());
     test('sign in', () => client.loginBO());
-
+    test('go to category ', () => client.goToCategoryBO());
+    test('search category ', () => client.searchCategoryBO());
+    test('check category image', () => client.checkCategoryImage());
+    test('check category image thumb', () => client.checkCategoryImageThumb());
+    test('check category title', () => client.checkCategoryTitle());
+    test('check category meta description', () => client.checkCategoryMetaDescription());
+    test('check category keywords', () => client.checkCategorykeyswordsText());
+    test('check category simplify url', () => client.checkCategorySimplifyURL());
 },'prestashop-client');
