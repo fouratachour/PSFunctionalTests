@@ -13,6 +13,9 @@ global.selenium_url = argv.SELENIUM;
 global._projectdir = path.join(__dirname, '..', '..');
 global.product_id = new Date().getTime();
 global.new_customer_email = 'pub' + date_time + '@prestashop.com';
+global.categoryNameTable = [];
+global.categoryImage = path.join(__dirname, '', 'datas', 'category_image.png');
+global.categoryThumb = path.join(__dirname, '', 'datas', 'category_miniature.png');
 
 module.exports = {
     selector: {
