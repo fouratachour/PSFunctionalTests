@@ -31,6 +31,8 @@
   "devDependencies": {
     "dateformat": "^2.0.0",
     "mochawesome": "^2.3.0",
-    "nodemailer": "^4.0.1"
+    "nodemailer": "^4.0.1",
+    "chai": "^4.1.2",
+    "chai-string": "^1.4.0"
   }
 }
