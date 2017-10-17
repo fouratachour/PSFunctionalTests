@@ -8,6 +8,7 @@ class PrestashopClient {
         this.client = getClient();
     }
 
+
     loginBO(){
         return this.client
             .url(`http://localhost/prestashop_1.7.2.2/admin-dev`)
@@ -18,15 +19,18 @@ class PrestashopClient {
             .waitForExist(selector.BO.AddProductPage.menu, 90000)
     }
 
-    createCategory(){
+    goToCategoryList(){
         return this.client
             .waitForExist(selector.BO.CatalogPage.menu_button, 90000)
             .moveToObject(selector.BO.CatalogPage.menu_button)
             .waitForExist(selector.BO.CatalogPage.CategorySubmenu.submenu, 90000)
             .click(selector.BO.CatalogPage.CategorySubmenu.submenu)
+
+    }
+    createCategory(){
+        return this.client
             .waitForExist(selector.BO.CatalogPage.CategorySubmenu.new_category_button, 90000)
             .click(selector.BO.CatalogPage.CategorySubmenu.new_category_button)
-
     }
 
     addCategoryName(){
@@ -133,6 +137,49 @@ class PrestashopClient {
                 }
             })
     }
+
+    checkCategoryTitle(){
+        return this.client
+            .then(() => this.client.getAttribute(selector.BO.CatalogPage.CategorySubmenu.title, "value"))
+            .then((text) => expect(text).to.be.equal("test category"));
+    }
+
+    checkCategoryMetaDescription(){
+        return this.client
+            .then(() => this.client.getAttribute(selector.BO.CatalogPage.CategorySubmenu.meta_description,"value"))
+            .then((text) => expect(text).to.be.equal("this is the meta description"));
+    }
+
+/*    checkCategorykeyswordsText(){
+        return this.client
+            .then(() => this.client.getAttribute(selector.BO.CatalogPage.CategorySubmenu.keyswords,"value"))
+            .then(text => expect(text).to.contains("keyswords"));
+    }*/
+
+    checkCategorySimplifyURL(){
+        return this.client
+            .then(() => this.client.getAttribute(selector.BO.CatalogPage.CategorySubmenu.simplify_URL_input,"value"))
+            .then((text) => expect(text).to.be.equal(global.categoryName));
+    }
+
+    loginFO(){
+        return this.client
+            .url(`http://localhost/prestashop_1.7.2.2`)
+    }
+
+    openProductList(){
+        return this.client
+            .waitForExist(selector.FO.AccessPage.product_list_button, 90000)
+            .click(selector.FO.AccessPage.product_list_button)
+    }
+
+    checkexisitence(){
+        return this.client
+            .then(() => this.client.getText('//*[@id="left-column"]/div[1]/ul/li[2]/ul/li['+2+']/a'))
+            .then((text) => expect(text).to.be.equal(global.categoryName));
+    }
+
+
 
     takeScreenshot() {
         return this.client.saveScreenshot(`screenshots/${this.client.desiredCapabilities.browserName}_exception_${global.date_time}.png`);

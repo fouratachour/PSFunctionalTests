@@ -104,7 +104,6 @@ module.exports = {
                     title:'//*[@id="meta_title_1"]',
                     meta_description:'//*[@id="meta_description_1"]',
                     keyswords:'//*[@id="fieldset_0"]/div[2]/div[10]/div/div/input',
-                    keyswords_text:'//*[@id="fieldset_0"]/div[2]/div[10]/div/div/span',
                     simplify_URL_input:'//*[@id="link_rewrite_1"]',
                     save_button:'//*[@id="category_form_submit_btn"]',
                     success_panel:'//*[@id="content"]/div[3]/div',
